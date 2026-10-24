@@ -9,7 +9,7 @@
 #philosophy .thrive-triangle{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:-1;overflow:visible}
 #philosophy .thrive-triangle path{fill:none;stroke:#a4ae92;stroke-opacity:.65;stroke-width:1;vector-effect:non-scaling-stroke}
 #philosophy .thrive-card p{max-width:60%;margin-bottom:0}
-@media(max-width:700px){#philosophy .thrive-card{padding:42px 12px 105px}#philosophy .thrive-card p{max-width:80%;font-size:13px;line-height:1.9}}
+@media(max-width:700px){#philosophy .thrive-triangle{display:none}#philosophy .thrive-card{padding:30px 12px}#philosophy .thrive-card p{max-width:100%;font-size:13px;line-height:1.9}}
 /* STUDENT 最後一列：茁壯的字母、標題與說明整體置中。 */
 #philosophy .student-grid>div:last-child .student-card{text-align:center}
 #philosophy .student-grid>div:last-child .student-card-head{display:flex;flex-direction:column;align-items:center}
