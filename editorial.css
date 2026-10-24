@@ -4,6 +4,10 @@
 .video-wrapper{aspect-ratio:16/9}.video-direct{display:block;font-size:12px;padding:12px 22px 0;color:var(--gold)}.video-info{padding:22px}.video-category{font-size:10px;color:var(--gold);letter-spacing:1px;margin-bottom:12px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
+/* 學歷沿用專業歷程的單欄排列。 */
+.resume-detail #education .row>div{flex:0 0 100%;width:100%;max-width:100%}
+.resume-detail #education .education-card{padding:36px 40px;background:#f0f0e8;border-top:2px solid #c6c9b8}
+@media(max-width:700px){.resume-detail #education .education-card{padding:24px}}
 /* 獎項、認證與國際見習沿用經歷的單欄排列。 */
 .resume-detail #awards .row>div,.resume-detail #international .row>div{flex:0 0 100%;width:100%;max-width:100%}
 .resume-detail #awards .award-item{background:#f0f0e8;border:0;border-top:1px solid var(--line);padding:22px 28px;font-size:18px;line-height:1.9}
