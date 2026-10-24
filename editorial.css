@@ -4,6 +4,10 @@
 .video-wrapper{aspect-ratio:16/9}.video-direct{display:block;font-size:12px;padding:12px 22px 0;color:var(--gold)}.video-info{padding:22px}.video-category{font-size:10px;color:var(--gold);letter-spacing:1px;margin-bottom:12px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
+/* STUDENT 最後一列：茁壯的字母、標題與說明整體置中。 */
+#philosophy .student-grid>div:last-child .student-card{text-align:center}
+#philosophy .student-grid>div:last-child .student-card-head{display:flex;flex-direction:column;align-items:center}
+#philosophy .student-grid>div:last-child .student-card p{max-width:760px;margin-inline:auto}
 /* 關於我：完整資料採分組列表，兼顧長職稱與手機閱讀。 */
 .about-facts{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;margin-top:38px;padding-top:32px;border-top:1px solid #cdd2c5}
 .about-facts-group{min-width:0}.about-facts-group h3{display:flex;align-items:center;gap:12px;font:600 24px/1.5 var(--serif);margin:0 0 18px}.about-facts-group h3 i{font-size:22px;color:var(--gold)}
