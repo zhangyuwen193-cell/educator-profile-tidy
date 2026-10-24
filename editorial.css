@@ -4,6 +4,15 @@
 .video-wrapper{aspect-ratio:16/9}.video-direct{display:block;font-size:12px;padding:12px 22px 0;color:var(--gold)}.video-info{padding:22px}.video-category{font-size:10px;color:var(--gold);letter-spacing:1px;margin-bottom:12px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
+/* 姓名作為封面主標題。 */
+.opening .eyebrow{margin-bottom:32px;line-height:1.8}
+.opening h1.cover-name{font-family:var(--serif);font-size:clamp(76px,8vw,122px);font-weight:700;line-height:1.25;letter-spacing:.08em;margin:0 0 18px;white-space:nowrap}
+.cover-english{font-size:15px;letter-spacing:.29em;color:var(--ink);margin:0 0 38px;font-weight:500}
+.opening .opening-description{font-size:18px;line-height:2.1;margin-bottom:0}
+.opening .hero-actions{margin:32px 0 38px}
+.opening .hero-note{line-height:1.9}
+@media(max-width:1000px){.opening h1.cover-name{font-size:clamp(66px,8vw,92px)}.cover-english{font-size:12px;letter-spacing:.22em}.opening .opening-description{font-size:16px}}
+@media(max-width:700px){.opening h1.cover-name{font-size:clamp(66px,17vw,96px);letter-spacing:.07em;margin-bottom:14px}.opening .eyebrow{margin-bottom:24px}.cover-english{font-size:12px;letter-spacing:.24em;margin-bottom:28px}.opening .opening-description{font-size:16px;line-height:2}.opening .hero-actions{margin:26px 0 30px}.opening .opening-description br{display:block}}
 /* 學歷沿用專業歷程的單欄排列。 */
 .resume-detail #education .row>div{flex:0 0 100%;width:100%;max-width:100%}
 .resume-detail #education .education-card{padding:36px 40px;background:#f0f0e8;border-top:2px solid #c6c9b8}
