@@ -1,7 +1,7 @@
-# 張語宸｜教育實踐者 — 整理版副本
+# 張語宸｜教育實踐者 — tidy 副本
 
-保留原網站內容、區塊順序及深藍金色側欄，改善字級、間距、手機導覽與區塊連結。
+使用拱形照片封面與上方導覽，札記採左圖右文單欄列表，專業歷程採可展開分類，經歷使用淡色底與金色日期清單。
 
-開啟 index.html 即可瀏覽；tidy.css 與 tidy.js 提供排版與操作調整，journal-*.html 保留教育札記。
+開啟 index.html 即可瀏覽；editorial.css、editorial.js 為目前使用的樣式與互動。journal-*.html 保留原有札記內文。
 
-此儲存庫為獨立副本，不會更動原始網站 educator-profile。
+原始 educator-profile 儲存庫不受此副本影響。
