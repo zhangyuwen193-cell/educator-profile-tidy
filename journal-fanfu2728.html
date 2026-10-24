@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>返服27×28｜說好的最後一次呢？</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
+rel="stylesheet">
+
+<style>
+
+:root{
+  --navy:#1f3553;
+  --gold:#b79a5b;
+  --soft:#f7f5ef;
+  --text:#29384b;
+  --muted:#6f7a88;
+  --line:#e8e3d8;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  color:var(--text);
+  line-height:1.9;
+  background:white;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================
+   上方導覽
+========================= */
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.topbar-inner{
+  max-width:1400px;
+  margin:auto;
+  padding:16px 28px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  font-weight:900;
+  color:var(--navy);
+}
+
+.brand-circle{
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+  margin-right:10px;
+
+  background:var(--navy);
+  color:white;
+}
+
+.back-btn{
+  padding:10px 20px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:white;
+  font-weight:700;
+  transition:.25s;
+}
+
+.back-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(31,53,83,.10);
+}
+
+
+/* =========================
+   標題
+========================= */
+
+.article-hero{
+  padding:90px 30px 75px;
+
+  background:
+  radial-gradient(
+    circle at 90% 20%,
+    rgba(183,154,91,.18),
+    transparent 30%
+  ),
+  var(--soft);
+}
+
+.article-hero-inner{
+  max-width:1300px;
+  margin:auto;
+}
+
+.label{
+  color:var(--gold);
+  font-size:.9rem;
+  font-weight:800;
+  letter-spacing:4px;
+
+  display:flex;
+  align-items:center;
+  gap:15px;
+
+  margin-bottom:22px;
+}
+
+.label::before{
+  content:"";
+  width:50px;
+  height:2px;
+  background:var(--gold);
+}
+
+h1{
+  margin:0 0 15px;
+  color:var(--navy);
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:clamp(3rem,6vw,5.5rem);
+  line-height:1.25;
+}
+
+.subtitle{
+  color:var(--navy);
+  font-size:clamp(1.3rem,2.5vw,2rem);
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+.meta{
+  color:var(--gold);
+  font-size:1.05rem;
+  font-weight:800;
+  line-height:2;
+}
+
+
+/* =========================
+   文章
+========================= */
+
+.article-wrap{
+  max-width:1300px;
+  margin:auto;
+  padding:70px 30px 110px;
+}
+
+.cover{
+  width:100%;
+  overflow:hidden;
+  border-radius:28px;
+  margin-bottom:60px;
+  background:#eee;
+
+  box-shadow:
+  0 24px 60px rgba(31,53,83,.12);
+}
+
+.cover img{
+  display:block;
+  width:100%;
+  height:720px;
+  object-fit:cover;
+  object-position:center 50%;
+}
+
+.article-body{
+  max-width:950px;
+  margin:auto;
+}
+
+.lead{
+  color:var(--navy);
+  font-size:1.45rem;
+  font-weight:800;
+  margin-bottom:35px;
+}
+
+.article-body p{
+  font-size:1.2rem;
+  line-height:2;
+  margin-bottom:30px;
+}
+
+
+/* =========================
+   對話文字
+========================= */
+
+.memory-quote{
+  margin:38px 0;
+  padding:28px 32px;
+
+  border-left:4px solid var(--gold);
+  background:var(--soft);
+
+  color:var(--navy);
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:1.45rem;
+  font-weight:700;
+  line-height:1.8;
+}
+
+
+/* =========================
+   照片
+========================= */
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  margin:50px 0;
+}
+
+.photo-card{
+  overflow:hidden;
+  border-radius:22px;
+  border:1px solid var(--line);
+  background:var(--soft);
+
+  box-shadow:
+  0 12px 30px rgba(31,53,83,.06);
+}
+
+.photo-card img{
+  display:block;
+  width:100%;
+  height:420px;
+  object-fit:cover;
+}
+
+/* 三張照片 */
+.photo-grid.three{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+.photo-grid.three .photo-card img{
+  height:360px;
+}
+
+
+/* =========================
+   最後一句
+========================= */
+
+.closing{
+  max-width:950px;
+  margin:70px auto 20px;
+  padding:45px 35px;
+
+  text-align:center;
+  border-radius:26px;
+
+  background:var(--navy);
+  color:white;
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:700;
+  line-height:1.7;
+}
+
+.closing span{
+  color:#d8bf89;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+  padding:42px 20px;
+  text-align:center;
+  background:#16283f;
+  color:#aeb9c5;
+}
+
+footer strong{
+  color:white;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width:767px){
+
+  .topbar-inner{
+    padding:12px 15px;
+  }
+
+  .article-hero{
+    padding:60px 20px 50px;
+  }
+
+  .article-wrap{
+    padding:40px 18px 80px;
+  }
+
+  h1{
+    font-size:3rem;
+  }
+
+  .subtitle{
+    font-size:1.35rem;
+  }
+
+  .meta{
+    font-size:.9rem;
+  }
+
+  .cover img{
+    height:auto;
+    max-height:600px;
+  }
+
+  .lead{
+    font-size:1.2rem;
+  }
+
+  .article-body p{
+    font-size:1.05rem;
+  }
+
+  .memory-quote{
+    padding:22px;
+    font-size:1.2rem;
+  }
+
+  .photo-grid,
+  .photo-grid.three{
+    grid-template-columns:1fr;
+    gap:18px;
+    margin:35px 0;
+  }
+
+  .photo-card img,
+  .photo-grid.three .photo-card img{
+    height:auto;
+    max-height:600px;
+  }
+
+  .closing{
+    margin-top:50px;
+    padding:32px 20px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+NAV
+========================= -->
+
+<div class="topbar">
+
+  <div class="topbar-inner">
+
+    <a href="index.html" class="brand">
+
+      <span class="brand-circle">
+        張
+      </span>
+
+      張語宸
+
+    </a>
+
+
+    <a href="index.html#journal" class="back-btn">
+      ← 回到札記
+    </a>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+ARTICLE HEADER
+========================= -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="label">
+      JOURNAL
+    </div>
+
+    <h1>
+      返服27×28
+    </h1>
+
+    <div class="subtitle">
+      說好的最後一次呢？
+    </div>
+
+    <div class="meta">
+
+      2025.02.06－02.07
+      ｜中友返服27・機動股長
+
+      <br>
+
+      2026.02.04－02.06
+      ｜中友返服28・機動股長／團體動力培訓講師
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+ARTICLE
+========================= -->
+
+<main class="article-wrap">
+
+
+  <!-- 封面 -->
+
+  <div class="cover">
+
+    <img
+      src="https://drive.google.com/thumbnail?id=1mIviXnDNM84NYcyq05e0UNJn1ZjxaWCJ&sz=w2000"
+      alt="中友返服27與返服28">
+
+  </div>
+
+
+
+  <article class="article-body">
+
+
+    <p class="lead">
+
+      大一跑完第一次返服後，
+      評估了一下自己的實力，
+      我很認真地跟爸媽說：
+
+    </p>
+
+
+    <div class="memory-quote">
+
+      「我只會跑這一次，
+      明年寒假就可以好好待在家了。」
+
+    </div>
+
+
+    <p>
+      沒想到，隔年我又出現在返服。
+    </p>
+
+
+    <!-- 照片 2、3 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1bOR4z2dBDUbgc9ceAXGgZHgWKnaBthpr&sz=w1600"
+          alt="返服活動紀錄">
+
+      </div>
+
+      <div class="photo-card">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1fStYg_iL0AO5vDh-Gr3Ab7VLjX452yZ7&sz=w1600"
+          alt="返服活動紀錄">
+
+      </div>
+
+    </div>
+
+
+    <p>
+
+      第二年結束後，
+      我再次信誓旦旦地跟爸媽保證：
+
+    </p>
+
+
+    <div class="memory-quote">
+
+      「這次真的是最後一次了！」
+
+    </div>
+
+
+    <p>
+      結果第三年，我還是出現在返服。
+    </p>
+
+
+    <p>
+
+      從活動股員到機動股長，
+      機動股對我這種喜歡動、坐不住的人來說，
+      意外地非常適合。
+
+      比起待在固定的位置，
+      我更喜歡在不同地方跑來跑去，
+      哪裡需要幫忙，就往哪裡去。
+
+      雖然總是在跑腿、總是很累，
+      但我真的很喜歡這份工作。
+
+    </p>
+
+
+    <!-- 照片 4、5 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=13FuWvF8NlejknYp2QAtk9ilnJCna53tt&sz=w1600"
+          alt="返服活動紀錄">
+
+      </div>
+
+      <div class="photo-card">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1EULpvrpM849VQ2UU4WbnXCd1KsUeN7P1&sz=w1600"
+          alt="返服活動紀錄">
+
+      </div>
+
+    </div>
+
+
+    <p>
+
+      第三年再回到返服，
+      感受又和前兩年不太一樣。
+
+      這一次，我已經成了大家口中的「老人」，
+      也受到總籌邀請，
+      擔任團體動力培訓講師。
+
+    </p>
+
+
+    <p>
+
+      看著大一的學弟妹第一次參與返服、
+      第一次忙著準備活動、
+      第一次見識到孩子們驚人的活力，
+
+      常常有一種看見當年自己的感覺。
+
+    </p>
+
+
+    <!-- 照片 6、7 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1k5ma34Y-AsAnVW4ZdmLUPliHp61_4Xwh&sz=w1600"
+          alt="返服活動紀錄">
+
+      </div>
+
+      <div class="photo-card">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1eIS7IL68CvasFljug2QIXY6FMJd4vkAe&sz=w1600"
+          alt="返服活動紀錄">
+
+      </div>
+
+    </div>
+
+
+    <p>
+
+      原本只打算跑一次的返服，
+      最後跑了三年。
+
+    </p>
+
+
+    <p>
+
+      從大一懵懵懂懂的活動股員，
+      到後來成為機動股長，
+      再到第三年自稱「老屁股長」。
+
+      身分變了，
+      身邊一起奮鬥的人也換了一批，
+      但每年寒假，
+      我還是回到了這個熟悉的地方。
+
+    </p>
+
+
+
+    <div class="closing">
+
+      大概每一次說著
+      <span>「這真的是最後一次」</span>，<br>
+
+      都是因為心裡其實還有那麼一點捨不得吧。
+
+    </div>
+
+
+  </article>
+
+</main>
+
+
+
+<footer>
+
+  <strong>
+    張語宸 JHANG,YU-CHEN
+  </strong>
+
+  <div>
+    JOURNAL · LIFE · EDUCATION · PRACTICE
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>

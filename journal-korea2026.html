@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>一下當學者，一下當觀光客｜韓國教育見習</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --navy:#1f3553;
+  --gold:#b79a5b;
+  --soft:#f7f5ef;
+  --text:#29384b;
+  --muted:#6f7a88;
+  --line:#e8e3d8;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  color:var(--text);
+  line-height:1.9;
+  background:white;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================
+   導覽列
+========================= */
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.topbar-inner{
+  max-width:1400px;
+  margin:auto;
+  padding:16px 28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  font-weight:900;
+  color:var(--navy);
+}
+
+.brand-circle{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  margin-right:10px;
+  background:var(--navy);
+  color:white;
+}
+
+.back-btn{
+  padding:10px 20px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:white;
+  font-weight:700;
+  transition:.25s;
+}
+
+.back-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(31,53,83,.10);
+}
+
+
+/* =========================
+   標題
+========================= */
+
+.article-hero{
+  padding:90px 30px 75px;
+
+  background:
+  radial-gradient(
+    circle at 90% 20%,
+    rgba(183,154,91,.18),
+    transparent 30%
+  ),
+  var(--soft);
+}
+
+.article-hero-inner{
+  max-width:1300px;
+  margin:auto;
+}
+
+.label{
+  color:var(--gold);
+  font-size:.9rem;
+  font-weight:800;
+  letter-spacing:4px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:22px;
+}
+
+.label::before{
+  content:"";
+  width:50px;
+  height:2px;
+  background:var(--gold);
+}
+
+h1{
+  margin:0 0 15px;
+  color:var(--navy);
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:clamp(3rem,6vw,5.5rem);
+  line-height:1.25;
+}
+
+.subtitle{
+  color:var(--navy);
+  font-size:clamp(1.3rem,2.5vw,2rem);
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+.meta{
+  color:var(--gold);
+  font-size:1.05rem;
+  font-weight:800;
+}
+
+
+/* =========================
+   文章
+========================= */
+
+.article-wrap{
+  max-width:1300px;
+  margin:auto;
+  padding:70px 30px 110px;
+}
+
+.article-body{
+  max-width:950px;
+  margin:auto;
+}
+
+.lead{
+  color:var(--navy);
+  font-size:1.45rem;
+  font-weight:800;
+  margin-bottom:35px;
+}
+
+.article-body p{
+  font-size:1.2rem;
+  line-height:2;
+  margin-bottom:30px;
+}
+
+
+/* =========================
+   封面
+========================= */
+
+.cover{
+  width:100%;
+  overflow:hidden;
+  border-radius:28px;
+  margin-bottom:65px;
+  background:#eee;
+
+  box-shadow:
+  0 24px 60px rgba(31,53,83,.12);
+}
+
+.cover img{
+  display:block;
+  width:100%;
+  height:720px;
+  object-fit:cover;
+  object-position:center;
+}
+
+
+/* =========================
+   照片
+========================= */
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  margin:50px 0;
+}
+
+.photo-card{
+  overflow:hidden;
+  border-radius:22px;
+  border:1px solid var(--line);
+  background:var(--soft);
+
+  box-shadow:
+  0 12px 30px rgba(31,53,83,.06);
+}
+
+.photo-card img{
+  display:block;
+  width:100%;
+  height:420px;
+  object-fit:cover;
+}
+
+.single-photo{
+  margin:55px 0;
+  overflow:hidden;
+  border-radius:24px;
+  box-shadow:0 15px 40px rgba(31,53,83,.08);
+}
+
+.single-photo img{
+  display:block;
+  width:100%;
+  max-height:680px;
+  object-fit:cover;
+}
+
+
+/* =========================
+   引言
+========================= */
+
+.memory-quote{
+  margin:45px 0;
+  padding:32px 35px;
+
+  border-left:4px solid var(--gold);
+  background:var(--soft);
+
+  color:var(--navy);
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:1.45rem;
+  font-weight:700;
+  line-height:1.8;
+}
+
+
+/* =========================
+   結尾
+========================= */
+
+.closing{
+  max-width:950px;
+  margin:70px auto 20px;
+  padding:45px 35px;
+
+  text-align:center;
+  border-radius:26px;
+
+  background:var(--navy);
+  color:white;
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:700;
+  line-height:1.8;
+}
+
+.closing span{
+  color:#d8bf89;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+  padding:42px 20px;
+  text-align:center;
+  background:#16283f;
+  color:#aeb9c5;
+}
+
+footer strong{
+  color:white;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media(max-width:767px){
+
+  .topbar-inner{
+    padding:12px 15px;
+  }
+
+  .article-hero{
+    padding:60px 20px 50px;
+  }
+
+  .article-wrap{
+    padding:40px 18px 80px;
+  }
+
+  h1{
+    font-size:2.8rem;
+  }
+
+  .subtitle{
+    font-size:1.3rem;
+  }
+
+  .meta{
+    font-size:.9rem;
+  }
+
+  .cover img{
+    height:auto;
+    max-height:600px;
+  }
+
+  .lead{
+    font-size:1.2rem;
+  }
+
+  .article-body p{
+    font-size:1.05rem;
+  }
+
+  .photo-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+    margin:35px 0;
+  }
+
+  .photo-card img{
+    height:auto;
+    max-height:600px;
+  }
+
+  .single-photo{
+    margin:35px 0;
+  }
+
+  .single-photo img{
+    height:auto;
+    max-height:650px;
+  }
+
+  .memory-quote{
+    padding:24px 22px;
+    font-size:1.2rem;
+  }
+
+  .closing{
+    margin-top:50px;
+    padding:32px 20px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- 導覽列 -->
+
+<div class="topbar">
+
+  <div class="topbar-inner">
+
+    <a href="index.html" class="brand">
+
+      <span class="brand-circle">
+        張
+      </span>
+
+      張語宸
+
+    </a>
+
+    <a href="index.html#journal" class="back-btn">
+      ← 回到札記
+    </a>
+
+  </div>
+
+</div>
+
+
+
+<!-- 標題 -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="label">
+      INTERNATIONAL EDUCATION
+    </div>
+
+    <h1>
+      一下當學者，一下當觀光客
+    </h1>
+
+    <div class="subtitle">
+      韓國教育見習
+    </div>
+
+    <div class="meta">
+      2026.03.28－04.04
+      ｜韓國教育見習
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<main class="article-wrap">
+
+
+  <!-- 照片1：封面 -->
+
+  <div class="cover">
+
+    <img
+      src="https://drive.google.com/thumbnail?id=1FApH1W20WS8aubKEWckV1GgNzleZfINn&sz=w1600"
+      alt="韓國教育見習">
+
+  </div>
+
+
+  <article class="article-body">
+
+
+    <p class="lead">
+      第一次踏上韓國，對那裡的一切都覺得很新鮮。
+    </p>
+
+
+    <p>
+      從機場到民宿的路上就開始一路觀察，
+      首爾的繁華、街上的人、學校的空間配置、學生的衣著，
+      都讓我有很多新的發現。
+    </p>
+
+
+    <!-- 照片2、3 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1zp5Ruubn-KTthoExVaM5TgrcbeB_WZuV&sz=w1600"
+          alt="韓國教育見習">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=18PgdVOyWQNUOvfWbhbGBRdz6wF9cjpRj&sz=w1600"
+          alt="韓國教育見習">
+      </div>
+
+    </div>
+
+
+    <p>
+      這趟見習去了京仁教育大學附設小學教學，
+      也參訪京仁教育大學、首爾大學、仁川外國語村，
+      參加講座與交流。
+    </p>
+
+
+    <p>
+      印象很深的是韓國在科技教育、雙語教育上的投入，
+      還有學校的空間與設備，
+      都讓我感受到他們對教育的重視。
+    </p>
+
+
+    <!-- 照片4、5 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=14OkRhR2myIX7cpCqH-lPDhi26m3ON26Q&sz=w1600"
+          alt="韓國教育參訪">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1342b5umpMaZPHD7zfXMU4NKXoj4Xbtre&sz=w1600"
+          alt="韓國教育參訪">
+      </div>
+
+    </div>
+
+
+    <p>
+      除了看教育，我們也去了韓國國立中央博物館、
+      宗廟、景福宮參訪，見識韓國文化。
+    </p>
+
+
+    <!-- 照片6、7 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=166AZt2vK4yet8zCGqhm6MwFEmREtH2eX&sz=w1600"
+          alt="韓國文化參訪">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1c63SPqTjbp6oqFVAOpuNd0DpmnsVo_o2&sz=w1600"
+          alt="韓國文化參訪">
+      </div>
+
+    </div>
+
+
+    <p>
+      這趟見習的重頭戲，
+      是進到京仁教大附小和學生交流台灣知識，
+      這是我第一次在小學全英文上課。
+    </p>
+
+
+    <p>
+      很意外的是，韓國小學生對台灣其實都有一定程度的了解。
+      我也特別準備了扯鈴這項台灣傳統技藝進行表演。
+    </p>
+
+
+    <div class="memory-quote">
+      因為教室是木質地板，一顆鈴都不能掉。<br>
+      所以只能放百分之百會成功的招。
+    </div>
+
+
+    <!-- 照片8 -->
+
+    <div class="single-photo">
+
+      <img
+        src="https://drive.google.com/thumbnail?id=17VHLqTfBtGFwIhRDLa6OYHvbmZC8dhpc&sz=w1800"
+        alt="京仁教育大學附設小學教學">
+
+    </div>
+
+
+    <p>
+      還好最後零失誤順利完成。
+    </p>
+
+
+    <!-- 照片9、10 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1ydzyljwnVv7KElPV9wWzod78c5ETHWoO&sz=w1600"
+          alt="京仁教大附小教學">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1-3xsCOVexX4t2bJKmiaBEV_9Ahj5LEaD&sz=w2000"
+          alt="京仁教大附小教學">
+      </div>
+
+    </div>
+
+
+    <div class="memory-quote">
+      一下當學者，<br>
+      一下又開啟觀光模式。
+    </div>
+
+
+    <p>
+      很懷念那段每天可以一下當學者、
+      一下又開啟觀光模式的日子，充實又能玩。
+    </p>
+
+
+    <p>
+      白天認真觀察、參訪、觀光，
+      探索這座城市，也收集好多不同的學校。
+    </p>
+
+
+    <!-- 照片11、12 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1GqEHBYGRMcyNdl78w2IPG8spEUl9tX53&sz=w1600"
+          alt="韓國教育參訪">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1SekfJgdsP6hK-p4i3wJEKOyT1C8AaB1R&sz=w1600"
+          alt="韓國教育參訪">
+      </div>
+
+    </div>
+
+
+    <p>
+      晚上大家再一起開反思會議，
+      每次聽完大家分享，
+      都會發現原來同一個地方，每個人看到的東西都不一樣，
+      也常常補足很多自己沒有注意到的細節。
+    </p>
+
+
+    <!-- 照片13 -->
+
+    <div class="single-photo">
+
+      <img
+        src="https://drive.google.com/thumbnail?id=1ks8-hGk-_SWCXtEofNOZvfX5vq2WCKF-&sz=w1800"
+        alt="韓國教育見習團隊">
+
+    </div>
+
+
+    <p>
+      也很懷念那些旅途中很生活的小片段。
+    </p>
+
+
+    <p>
+      大家在京仁教大的山坡上驗收課程、被寒風吹、看棒球，
+      在民宿的玻璃櫥窗外驗收我的扯鈴，
+      聚在一起喝飲料、吃餅乾、聊天、玩扯鈴、跳健康操。
+    </p>
+
+
+    <!-- 照片14、15 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=17F7kvefZDuiN8LWWgDZ3JflJAnPJ8tLn&sz=w1600"
+          alt="韓國見習生活">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1pt-W3Imn4uNDmv-zR3SpTL3Z6Zeedzok&sz=w1600"
+          alt="韓國見習生活">
+      </div>
+
+    </div>
+
+
+    <p>
+      一起出去吃飯、搭地鐵、看櫻花，
+      信亨老師教我正確做伏地挺身，
+      麗卿老師幫我雕英文。
+    </p>
+
+
+    <!-- 照片16、17 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=135pKzoIxFF8slfUnqGRYNZ3xU5cyQh_I&sz=w1600"
+          alt="韓國見習團隊生活">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1e5D3sio9dBnhrA3t-9CxDOLZ896NM8DX&sz=w1600"
+          alt="韓國見習團隊生活">
+      </div>
+
+    </div>
+
+
+    <p>
+      真的很喜歡韓國教育見習團隊。
+    </p>
+
+
+    <div class="memory-quote">
+      玩的時候很瘋，<br>
+      認真的時候很認真，<br>
+      對教育都很有想法。
+    </div>
+
+
+    <!-- 照片18、19 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1Ni5-dukwYj8eJcVr6z4Qmfin9gdteodg&sz=w1600"
+          alt="韓國教育見習團隊">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1KhmglaMjHiDXtRRSIHp7BMIzgHqwjlTr&sz=w1600"
+          alt="韓國教育見習團隊">
+      </div>
+
+    </div>
+
+
+    <div class="closing">
+
+      跟一群很有
+      <span>教育熱忱</span>
+      的夥伴在一起，<br><br>
+
+      一邊看世界，<br>
+      一邊重新看見教育，<br><br>
+
+      真的很棒！
+
+    </div>
+
+
+  </article>
+
+</main>
+
+
+
+<footer>
+
+  <strong>
+    張語宸 JHANG,YU-CHEN
+  </strong>
+
+  <div>
+    JOURNAL · INTERNATIONAL · EDUCATION
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>

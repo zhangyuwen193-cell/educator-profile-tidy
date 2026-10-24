@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>走進偏鄉之後｜我在東里國中的第一堂課</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --navy:#1f3553;
+  --gold:#b79a5b;
+  --soft:#f7f5ef;
+  --text:#29384b;
+  --muted:#6f7a88;
+  --line:#e8e3d8;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  color:var(--text);
+  line-height:1.9;
+  background:white;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================
+   導覽列
+========================= */
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.topbar-inner{
+  max-width:1400px;
+  margin:auto;
+  padding:16px 28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  font-weight:900;
+  color:var(--navy);
+}
+
+.brand-circle{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  margin-right:10px;
+  background:var(--navy);
+  color:white;
+}
+
+.back-btn{
+  padding:10px 20px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:white;
+  font-weight:700;
+  transition:.25s;
+}
+
+.back-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(31,53,83,.10);
+}
+
+
+/* =========================
+   標題
+========================= */
+
+.article-hero{
+  padding:90px 30px 75px;
+
+  background:
+  radial-gradient(
+    circle at 90% 20%,
+    rgba(183,154,91,.18),
+    transparent 30%
+  ),
+  var(--soft);
+}
+
+.article-hero-inner{
+  max-width:1300px;
+  margin:auto;
+}
+
+.label{
+  color:var(--gold);
+  font-size:.9rem;
+  font-weight:800;
+  letter-spacing:4px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:22px;
+}
+
+.label::before{
+  content:"";
+  width:50px;
+  height:2px;
+  background:var(--gold);
+}
+
+h1{
+  margin:0 0 15px;
+  color:var(--navy);
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:clamp(3rem,6vw,5.5rem);
+  line-height:1.25;
+}
+
+.subtitle{
+  color:var(--navy);
+  font-size:clamp(1.3rem,2.5vw,2rem);
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+.meta{
+  color:var(--gold);
+  font-size:1.05rem;
+  font-weight:800;
+}
+
+
+/* =========================
+   文章
+========================= */
+
+.article-wrap{
+  max-width:1300px;
+  margin:auto;
+  padding:70px 30px 110px;
+}
+
+.article-body{
+  max-width:950px;
+  margin:auto;
+}
+
+.lead{
+  color:var(--navy);
+  font-size:1.45rem;
+  font-weight:800;
+  margin-bottom:35px;
+}
+
+.article-body p{
+  font-size:1.2rem;
+  line-height:2;
+  margin-bottom:30px;
+}
+
+
+/* =========================
+   封面
+========================= */
+
+.cover{
+  width:100%;
+  overflow:hidden;
+  border-radius:28px;
+  margin-bottom:65px;
+  background:#eee;
+
+  box-shadow:
+  0 24px 60px rgba(31,53,83,.12);
+}
+
+.cover img{
+  display:block;
+  width:100%;
+  height:720px;
+  object-fit:cover;
+  object-position:center 50%;
+}
+
+
+/* =========================
+   照片
+========================= */
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  margin:50px 0;
+}
+
+.photo-card{
+  overflow:hidden;
+  border-radius:22px;
+  border:1px solid var(--line);
+  background:var(--soft);
+
+  box-shadow:
+  0 12px 30px rgba(31,53,83,.06);
+}
+
+.photo-card img{
+  display:block;
+  width:100%;
+  height:420px;
+  object-fit:cover;
+}
+
+
+/* 單張大照片 */
+
+.single-photo{
+  margin:55px 0;
+  overflow:hidden;
+  border-radius:24px;
+  box-shadow:0 15px 40px rgba(31,53,83,.08);
+}
+
+.single-photo img{
+  display:block;
+  width:100%;
+  max-height:680px;
+  object-fit:cover;
+}
+
+
+/* =========================
+   引言
+========================= */
+
+.memory-quote{
+  margin:45px 0;
+  padding:32px 35px;
+
+  border-left:4px solid var(--gold);
+  background:var(--soft);
+
+  color:var(--navy);
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:1.45rem;
+  font-weight:700;
+  line-height:1.8;
+}
+
+
+/* =========================
+   結尾
+========================= */
+
+.closing{
+  max-width:950px;
+  margin:70px auto 20px;
+  padding:45px 35px;
+
+  text-align:center;
+  border-radius:26px;
+
+  background:var(--navy);
+  color:white;
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:700;
+  line-height:1.8;
+}
+
+.closing span{
+  color:#d8bf89;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+  padding:42px 20px;
+  text-align:center;
+  background:#16283f;
+  color:#aeb9c5;
+}
+
+footer strong{
+  color:white;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width:767px){
+
+  .topbar-inner{
+    padding:12px 15px;
+  }
+
+  .article-hero{
+    padding:60px 20px 50px;
+  }
+
+  .article-wrap{
+    padding:40px 18px 80px;
+  }
+
+  h1{
+    font-size:2.8rem;
+  }
+
+  .subtitle{
+    font-size:1.3rem;
+  }
+
+  .meta{
+    font-size:.9rem;
+  }
+
+  .cover img{
+    height:auto;
+    max-height:600px;
+  }
+
+  .lead{
+    font-size:1.2rem;
+  }
+
+  .article-body p{
+    font-size:1.05rem;
+  }
+
+  .photo-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+    margin:35px 0;
+  }
+
+  .photo-card img{
+    height:auto;
+    max-height:600px;
+  }
+
+  .single-photo{
+    margin:35px 0;
+  }
+
+  .single-photo img{
+    height:auto;
+    max-height:650px;
+  }
+
+  .memory-quote{
+    padding:24px 22px;
+    font-size:1.2rem;
+  }
+
+  .closing{
+    margin-top:50px;
+    padding:32px 20px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- 導覽列 -->
+
+<div class="topbar">
+
+  <div class="topbar-inner">
+
+    <a href="index.html" class="brand">
+
+      <span class="brand-circle">
+        張
+      </span>
+
+      張語宸
+
+    </a>
+
+    <a href="index.html#journal" class="back-btn">
+      ← 回到札記
+    </a>
+
+  </div>
+
+</div>
+
+
+
+<!-- 標題 -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="label">
+      JOURNAL
+    </div>
+
+    <h1>
+      走進偏鄉之後
+    </h1>
+
+    <div class="subtitle">
+      我在東里國中的第一堂課
+    </div>
+
+    <div class="meta">
+      2025.07.16－07.25
+      ｜臺師大 PASSION 偏鄉教育學分學程・東里國中暑期實習
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<main class="article-wrap">
+
+
+  <!-- 照片 1：封面 -->
+
+  <div class="cover">
+
+    <img
+      src="https://drive.google.com/thumbnail?id=1gWso5xdwGOUZsP2uf-ug_oZLQeLgZ7_W&sz=w2000"
+      alt="PASSION 東里國中暑期實習">
+
+  </div>
+
+
+  <article class="article-body">
+
+
+    <p class="lead">
+      至今，我還非常懷念這段時光。
+    </p>
+
+
+    <p>
+      夢想成為偏鄉教師的我，大二時走進了背倚海岸山脈、
+      秀姑巒溪與阿眉溪環繞的東里國中實習。
+    </p>
+
+
+    <p>
+      那天，我們五個人就這樣被「丟」在台九線旁的國中。
+      第一天忙著開物資、整理教材，做最後的備課工作，
+      準備迎接接下來的教學生活。
+    </p>
+
+
+    <!-- 照片 2、3 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1ptQrfxfBe95C1GydGm9usqF6S6Z2fWzM&sz=w1600"
+          alt="東里國中實習紀錄">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=12Na9pJhcawkFTdbK6mpmXLcYTSR-3Nd7&sz=w1600"
+          alt="東里國中實習紀錄">
+      </div>
+
+    </div>
+
+
+    <p>
+      對這群剛升上國中的孩子來說，這段時間就像是他們的新生訓練，
+      而我們的任務，是透過國文、英文與數學的教學，
+      陪他們銜接接下來的國中課程。
+    </p>
+
+
+    <p>
+      我負責數學科。從國中到高中，我一直都很喜歡數學，
+      也喜歡教別人數學，所以一開始覺得：
+    </p>
+
+
+    <div class="memory-quote">
+      「這個工作再適合我不過了。」
+    </div>
+
+
+    <!-- 照片 4、5 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1c4FCszgs_tHdeI23oAaeN-O8TAnAGcY6&sz=w1600"
+          alt="東里國中數學教學">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1Ua48r-GlU1MHW9pQgdAB2vJqj2lTmRXT&sz=w1600"
+          alt="東里國中數學教學">
+      </div>
+
+    </div>
+
+
+    <p>
+      但真正站上講台後，才發現「會數學」和「會教數學」
+      是兩件完全不同的事。
+    </p>
+
+
+    <p>
+      學生為什麼會在這裡算錯？他的迷思概念從哪裡來？
+      同一個概念，要怎麼換一種方式，才能讓不同程度的孩子理解？
+    </p>
+
+
+    <p>
+      一次次實際教學，加上研究員給我的提點，
+      讓我開始重新思考數學教學，
+      也發現自己還有很多需要學習的地方。
+    </p>
+
+
+    <!-- 照片 6 -->
+
+    <div class="single-photo">
+
+      <img
+        src="https://drive.google.com/thumbnail?id=1_jVn559HzPYUsOcsH5zZz5q6V_iRLS5H&sz=w1800"
+        alt="PASSION 東里國中實習">
+
+    </div>
+
+
+    <p>
+      而真正走進偏鄉後，我也慢慢發現，
+      只帶著滿滿的知識與雄心壯志進來，其實是不夠的。
+    </p>
+
+
+    <p>
+      有些孩子受到家庭背景與成長環境的影響，
+      在學習上面臨許多困難，而這些問題，
+      不是我們短短幾週的到來就能改變的。
+    </p>
+
+
+    <div class="memory-quote">
+      教授曾提醒我們：<br>
+      「不要進入偏鄉後，發現學生很難教，
+      就開始陷入自我懷疑。」
+    </div>
+
+
+    <!-- 照片 7、8 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=12RN42zR2gfiMb8FtWelvs6t-PAl8kNpK&sz=w1600"
+          alt="東里國中實習">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1kgWCP6yU1UBRCZiPC7e9hdNmSlIfj77Y&sz=w1600"
+          alt="東里國中實習">
+      </div>
+
+    </div>
+
+
+    <p>
+      這些孩子人生的前十二年，都在自己的生活環境中成長，
+      而我們能陪伴他們的時間卻很短。
+    </p>
+
+
+    <p>
+      我們不一定能在短時間內讓一個孩子成績突飛猛進，
+      也不一定能讓原本不喜歡讀書的孩子突然開始用功。
+    </p>
+
+
+    <p>
+      但我們可以陪伴他們、關心他們，聽聽他們的故事，
+      發現他們的興趣、找到他們的亮點，
+      也把自己的成長經歷分享給他們。
+    </p>
+
+
+    <!-- 照片 9、10 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=13kg4eit3UtohVDb-eRhg2C8_zg1XvtKa&sz=w1600"
+          alt="東里國中學生陪伴">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=197zR-Z4mpFxQGfxkC6rX58ejMnlhlr6m&sz=w1600"
+          alt="東里國中學生陪伴">
+      </div>
+
+    </div>
+
+
+    <p>
+      因為我們和學生的年紀其實沒有那麼遙遠，
+      也許比起「老師」，
+      我們更像是突然出現在他們生命裡的一群大哥哥、大姊姊。
+    </p>
+
+
+    <div class="memory-quote">
+      或許有一天，他們不記得我們教過的數學公式，
+      卻還記得：<br><br>
+
+      「以前有一個師大的大哥哥來教過我，
+      而我也想成為像他一樣的人。」
+    </div>
+
+
+    <!-- 照片 11 -->
+
+    <div class="single-photo">
+
+      <img
+        src="https://drive.google.com/thumbnail?id=1BWIWdqBpOJDyQgO4bywDjB1BeK8BJRtK&sz=w1800"
+        alt="PASSION 偏鄉教育">
+
+    </div>
+
+
+    <div class="closing">
+      知識是我們與學生交流的媒介，<br>
+      而我們<span>成為什麼樣的大人</span>，<br>
+      或許才是留給孩子更重要的東西。
+    </div>
+
+
+    <p>
+      也很謝謝這次一起奮鬥的四位夥伴。
+      從原本的陌生人，在這段時間裡慢慢熟悉，
+      一起備課、一起面對教學上的困難，
+      也一起解決生活和三餐問題，
+      甚至一起走過花東的許多地方，
+      到最後留下了一段屬於我們共同的回憶。
+    </p>
+
+
+    <!-- 照片 12、13 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1MqO3HjmkTmlB3ekZh1HXGzAi3SdR2tlZ&sz=w1600"
+          alt="PASSION 實習夥伴">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1178MwCmC7cYARBiR7TYdWYCAxMMB5ePT&sz=w1600"
+          alt="PASSION 實習夥伴">
+      </div>
+
+    </div>
+
+
+    <p>
+      最後，也很謝謝東里國中的主任與校長對我們的照顧。
+      第一次來到陌生的偏鄉學校，原本多少有些緊張，
+      後來才發現校長是體育系的學長、
+      主任則是國文系的學姐，
+      那一刻突然多了一份熟悉與安心。
+    </p>
+
+
+    <!-- 照片 14、15 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1gB6Sv0hw2B6AI_trG6Vbqhu0Fld5oIhV&sz=w1600"
+          alt="東里國中暑期實習">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1N7l4g59D1Ey1opaEa7lYSNmO97V4rjaA&sz=w1600"
+          alt="東里國中暑期實習">
+      </div>
+
+    </div>
+
+
+    <!-- 照片 16、17 -->
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1e0DEHT25nFd7wwwklSSBFqMvR3kn9Nhq&sz=w1600"
+          alt="東里國中暑期實習">
+      </div>
+
+      <div class="photo-card">
+        <img
+          src="https://drive.google.com/thumbnail?id=1Admp-L-4Kxav7yirsOi_cnEpu86YY_nS&sz=w1600"
+          alt="東里國中暑期實習">
+      </div>
+
+    </div>
+
+
+    <div class="closing">
+      也讓我第一次有種很深的感受：<br><br>
+      原來就算身在<span>天涯海角</span>，<br>
+      都會有師大人。
+    </div>
+
+
+  </article>
+
+</main>
+
+
+<footer>
+
+  <strong>
+    張語宸 JHANG,YU-CHEN
+  </strong>
+
+  <div>
+    JOURNAL · LIFE · EDUCATION · PRACTICE
+  </div>
+
+</footer>
+
+
+</body>
+</html>

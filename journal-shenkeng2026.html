@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="2026 深坑國小史懷哲計畫｜張語宸教育札記">
+
+<title>深坑國小史懷哲計畫｜張語宸札記</title>
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  rel="stylesheet">
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  rel="stylesheet">
+
+<link
+  href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
+  rel="stylesheet">
+
+
+<style>
+
+:root {
+  --navy:#1f3553;
+  --gold:#b79a5b;
+  --soft:#f7f5ef;
+  --text:#29384b;
+  --muted:#6f7a88;
+  --line:#e8e3d8;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+
+
+/* ================================
+   TOP BAR
+================================ */
+
+.topbar {
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid var(--line);
+  padding:18px 30px;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.topbar-inner {
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand {
+  text-decoration:none;
+  color:var(--navy);
+  font-weight:900;
+  font-size:1.1rem;
+}
+
+.brand-circle {
+  display:inline-flex;
+  width:40px;
+  height:40px;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:var(--navy);
+  color:#fff;
+  margin-right:8px;
+}
+
+.back-link {
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:700;
+}
+
+.back-link:hover {
+  color:var(--gold);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.article-header {
+  padding:90px 20px 55px;
+  text-align:center;
+
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(183,154,91,.16),
+      transparent 32%
+    ),
+    #fff;
+}
+
+.article-category {
+  color:var(--gold);
+  font-size:.85rem;
+  font-weight:800;
+  letter-spacing:4px;
+  margin-bottom:18px;
+}
+
+.article-date {
+  color:var(--gold);
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:18px;
+}
+
+.article-title {
+  max-width:1000px;
+  margin:0 auto;
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  serif;
+
+  color:var(--navy);
+  font-weight:700;
+
+  font-size:clamp(2.4rem,5vw,4.5rem);
+  line-height:1.4;
+}
+
+.article-subtitle {
+  max-width:850px;
+  margin:25px auto 0;
+  color:var(--muted);
+  font-size:1.15rem;
+  line-height:2;
+}
+
+
+/* ================================
+   HERO IMAGE
+================================ */
+
+.hero-image {
+  max-width:1200px;
+  margin:0 auto 70px;
+  padding:0 20px;
+}
+
+.hero-image img {
+  display:block;
+  width:100%;
+  max-height:720px;
+  object-fit:cover;
+  border-radius:28px;
+
+  box-shadow:
+  0 25px 60px rgba(31,53,83,.15);
+}
+
+
+/* ================================
+   ARTICLE
+================================ */
+
+.article-container {
+  max-width:900px;
+  margin:auto;
+  padding:0 25px 100px;
+}
+
+.article-container p {
+  font-size:1.15rem;
+  line-height:2.15;
+  margin-bottom:30px;
+  color:#344357;
+}
+
+
+/* ================================
+   SECTION
+================================ */
+
+.article-section {
+  margin:75px 0 30px;
+}
+
+.article-section-label {
+  color:var(--gold);
+  font-size:.8rem;
+  font-weight:800;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
+
+.article-section h2 {
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  serif;
+
+  color:var(--navy);
+  font-size:2.2rem;
+  font-weight:700;
+}
+
+
+/* ================================
+   QUOTE
+================================ */
+
+.article-quote {
+  margin:55px 0;
+  padding:30px 35px;
+
+  border-left:4px solid var(--gold);
+  background:var(--soft);
+
+  color:var(--navy);
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  serif;
+
+  font-size:1.65rem;
+  font-weight:700;
+  line-height:1.8;
+}
+
+
+/* ================================
+   PHOTOS
+================================ */
+
+.article-photo {
+  margin:50px 0;
+}
+
+.article-photo img {
+  width:100%;
+  max-height:680px;
+  object-fit:cover;
+  border-radius:20px;
+  display:block;
+}
+
+.photo-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin:50px 0;
+}
+
+.photo-grid img {
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.photo-grid-three {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin:50px 0;
+}
+
+.photo-grid-three img {
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:18px;
+}
+.photo-grid-three.full-photo img {
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:18px;
+}
+
+/* ================================
+   END
+================================ */
+
+.article-ending {
+  margin-top:80px;
+  padding:45px;
+  background:var(--soft);
+  border-radius:25px;
+}
+
+.article-ending p:last-child {
+  margin-bottom:0;
+}
+
+.back-bottom {
+  text-align:center;
+  margin-top:70px;
+}
+
+.back-button {
+  display:inline-block;
+  padding:15px 30px;
+
+  border:1px solid var(--gold);
+  border-radius:999px;
+
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:800;
+
+  transition:.3s;
+}
+
+.back-button:hover {
+  background:var(--navy);
+  color:white;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  background:#16283f;
+  color:#aeb9c5;
+  padding:40px 20px;
+  text-align:center;
+}
+
+footer strong {
+  color:white;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:767px) {
+
+  .article-header {
+    padding:65px 20px 40px;
+  }
+
+  .article-title {
+    font-size:2.5rem;
+  }
+
+  .article-container {
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .article-container p {
+    font-size:1.05rem;
+    line-height:2;
+  }
+
+  .article-quote {
+    font-size:1.4rem;
+    padding:25px;
+  }
+
+  .photo-grid,
+  .photo-grid-three {
+    grid-template-columns:1fr;
+  }
+
+  .photo-grid img,
+  .photo-grid-three img {
+    height:auto;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================================
+     NAV
+================================ -->
+
+<div class="topbar">
+
+  <div class="topbar-inner">
+
+    <a href="index.html" class="brand">
+      <span class="brand-circle">張</span>
+      張語宸
+    </a>
+
+    <a href="index.html#journal" class="back-link">
+      <i class="bi bi-arrow-left"></i>
+      返回札記
+    </a>
+
+  </div>
+
+</div>
+
+
+
+<!-- ================================
+     HEADER
+================================ -->
+
+<header class="article-header">
+
+  <div class="article-category">
+    EDUCATION SERVICE
+  </div>
+
+  <div class="article-date">
+    2026.07.25－08.14
+  </div>
+
+  <h1 class="article-title">
+    剛下飛機，話劇危機｜深坑國小史懷哲計畫
+  </h1>
+
+  <p class="article-subtitle">
+    國立臺灣師範大學史懷哲精神服務計畫<br>
+    課程組長 × 班導師 × 話劇老師 × 體育老師 × 總務
+  </p>
+
+</header>
+
+
+
+<!-- ================================
+     HERO IMAGE
+================================ -->
+
+<div class="hero-image">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1bP84TiBHO8Jn0EAWGS-pmf_rxj1grsZI&sz=w1800"
+    alt="深坑國小史懷哲計畫">
+
+</div>
+
+
+
+<!-- ================================
+     ARTICLE
+================================ -->
+
+<main class="article-container">
+
+
+<div class="article-quote">
+  剛下飛機，話劇危機。<br><br>
+  熬夜設計，創造奇蹟。
+</div>
+
+
+<p>
+剛結束東莞教育見習，回到台灣只休息了兩天，就緊接著投入行前營，以及接下來三週的史懷哲營期。
+</p>
+
+<p>
+從來沒有參加過史懷哲計畫的我，這次直接空降「課程組長、班導師、話劇老師、體育老師、總務」五種身分，對我來說真的是滿滿的挑戰。
+</p>
+
+
+<!-- 照片2、3 -->
+
+<div class="photo-grid">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1gO6uDJCKm4upge4qphUQ95-bzW4PAHsc&sz=w1200"
+    alt="深坑國小史懷哲">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1GGwLrsUQhjzkarXbo-pAOjfZeYa5P1sD&sz=w1200"
+    alt="深坑國小史懷哲">
+
+</div>
+
+
+
+<div class="article-section">
+
+  <div class="article-section-label">
+    THEATER CRISIS
+  </div>
+
+  <h2>
+    一個晚上，生出2.5堂話劇課
+  </h2>
+
+</div>
+
+
+<p>
+更刺激的是，上營前突然失去了我的話劇好夥伴。為了趕上隔天行前營的課程驗收，我硬是用了一個晚上，從幾乎零開始，生出了整整2.5堂劇場開發課程。
+</p>
+
+<p>
+面對這樣的天崩開局，我其實也沒有想太多，只是不斷提醒自己要穩住。因為只有先穩住自己，才有辦法穩住身邊的人，也告訴自己，不管發生什麼，都繼續向前看。
+</p>
+
+
+<div class="article-quote">
+  只有先穩住自己，<br>
+  才有辦法穩住身邊的人。
+</div>
+
+
+<!-- 照片4、5、6 -->
+
+<div class="photo-grid-three">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1HZ0wWTM3rYFasctilBDluuvf2a560hPM&sz=w1200"
+    alt="史懷哲課程">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1U_3bfEXpqL2uxnSdW0IwbeagCoWqzCjV&sz=w1200"
+    alt="史懷哲課程">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1VeXum_76lynKCk-J8cX-anCfo7B9RUEw&sz=w1200"
+    alt="史懷哲課程">
+
+</div>
+
+
+<p>
+尤其上營第一天，一天要主持兩節導師時間、上一節話劇、一節自修課輔，再教一節體育，等於一天五堂課。
+</p>
+
+<p>
+課程結束後還要主持議課、處理行政、訂便當，晚上再繼續準備、調整隔天的課程。
+</p>
+
+<p>
+但現在回頭看，反而覺得這些挑戰都非常值得。
+</p>
+
+
+
+<div class="article-section">
+
+  <div class="article-section-label">
+    FIRST THEATER CLASS
+  </div>
+
+  <h2>
+    第一次帶學生走進話劇
+  </h2>
+
+</div>
+
+
+<p>
+我也因此有了一個全新的體驗：第一次帶領學生走進話劇課程。
+</p>
+
+<p>
+原本很擔心自己能不能把課帶好，最後卻意外地非常順利。深坑國小的孩子們展現出很高的素質，也願意投入每一次活動，讓我第一次教話劇，就留下了一段很好的回憶。
+</p>
+
+
+<!-- 照片7、8 -->
+
+<div class="photo-grid">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1eJWadhMfgZAm7S67qfgigZJMT2_CBcIh&sz=w1200"
+    alt="深坑國小話劇課">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1OfDDv9YlotsNdcZz6_ka4srBHgVTCwK1&sz=w1200"
+    alt="深坑國小話劇課">
+
+</div>
+
+
+
+<div class="article-section">
+
+  <div class="article-section-label">
+    TEAM
+  </div>
+
+  <h2>
+    天崩開局，卻抽到天牌隊伍
+  </h2>
+
+</div>
+
+
+<p>
+雖然是天崩開局，但我們的行政夥伴與六位隊員組成，根本是「天牌開局」。
+</p>
+
+<p>
+很感謝有一群很棒的行政夥伴、有頂尖的課程組長搭檔，更重要的是，我們有六位真的非常認真的隊員。
+</p>
+
+<p>
+隊員們明明才大二升大三，卻展現出超乎我預期的教學能力，以及面對學生時的成熟度。
+</p>
+
+
+<!-- 照片9、10 -->
+
+<div class="photo-grid">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=171QYGZL1I3dalB4iVi6NXzp6goY1OOio&sz=w1200"
+    alt="史懷哲團隊">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1JZF7BR5m4QEPO5_NHEWRSIVXE7N-p8Iz&sz=w1200"
+    alt="史懷哲團隊">
+
+</div>
+
+
+<p>
+隊員每天除了準備自己的主題課程，還要陪孩子進行2～3節的話劇排練。
+</p>
+
+<p>
+每個人都很認真投入自己的教學，晚上回到營本部後，仍然夙夜匪懈地備課、討論、修改活動，常常一路忙到深夜。
+</p>
+
+<p>
+我認為這屆的隊員應該是史懷哲史上，數一數二辛苦的。
+</p>
+
+<p>
+看到大家都還在努力，我常常都不好意思先上樓睡覺。
+</p>
+
+
+<div class="article-quote">
+  真的覺得，<br>
+  能夠遇到妳們六位，<br>
+  是整個史懷哲裡面最幸運的一件事。
+</div>
+
+
+
+<!-- 照片11、12、13 -->
+
+<div class="photo-grid-three full-photo">
+      
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1jPq4yxwDQr7Nf7OXgUXdAoD_M63QZr20&sz=w1200"
+    alt="史懷哲夥伴">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1F6egD3MTfFG3vG-cgOnW8SOU0Zd1S5E8&sz=w1200"
+    alt="史懷哲夥伴">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1fLAjs4CfPfgbs8fDZTeid3DZXKat2HmT&sz=w1200"
+    alt="史懷哲夥伴">
+
+</div>
+
+
+
+<div class="article-section">
+
+  <div class="article-section-label">
+    CAMP LIFE
+  </div>
+
+  <h2>
+    我最懷念的，是營本部的日常
+  </h2>
+
+</div>
+
+
+<p>
+也很懷念住在營本部的那些日子。
+</p>
+
+<p>
+從一開始大家幾乎完全不熟，到後來開始互相開玩笑、嬉鬧、打排球。
+</p>
+
+<p>
+一起跟鸚鵡對話、一起丟垃圾、一起開會、一起看回顧影片、被各種昆蟲嚇到。也一起鼓起勇氣走進校長室，找傑克校長聊天。
+</p>
+
+
+<!-- 照片14、15 -->
+
+<div class="photo-grid">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1Ynd8p0z7q2gSvMsZ6ZXq6HlPrHlzJ-FF&sz=w1200"
+    alt="史懷哲營本部生活">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1JFmaOolnPt7UCPUiBPyyo4HzthR40_uM&sz=w1200"
+    alt="史懷哲營本部生活">
+
+</div>
+
+
+<p>
+還有一堆現在想起來很好笑的事情。
+</p>
+
+<p>
+我播的歌被嫌、我生病不戴口罩被念、我在紙箱和椅子上睡著被錄起來、我在營本部丟球被隊員罵，還有營本部腳踏車「吳宗彤」經典再現等等。
+</p>
+
+<p>
+但那些當下看起來很日常、很荒謬，甚至有點狼狽的小事情，現在回頭看，反而都成了最懷念的片段。
+</p>
+
+
+
+<div class="article-section">
+
+  <div class="article-section-label">
+    TOGETHER
+  </div>
+
+  <h2>
+    撐過新冠群聚的最後一段路
+  </h2>
+
+</div>
+
+
+<p>
+營期後段，我們還一起爆發了新冠肺炎群聚感染。
+</p>
+
+<p>
+大家陸續生病、身體越來越疲憊，但為了深坑的孩子，我們還是拖著疲憊的身軀，把每一堂課、每一次排練努力完成。
+</p>
+
+<p>
+現在想想，那段時間大家真的很有毅力。
+</p>
+
+
+<!-- 照片16、17 -->
+
+<div class="photo-grid">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1LFSHkQk9oojAEOi3Mi7Vr5VQmobYh2iL&sz=w1200"
+    alt="深坑國小史懷哲">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1ZeJcvMvxd8iwYcPU2YqpPkq-vgK03W3_&sz=w1200"
+    alt="深坑國小史懷哲">
+
+</div>
+
+
+
+<div class="article-section">
+
+  <div class="article-section-label">
+    FIRST TIMES
+  </div>
+
+  <h2>
+   好多個第一次
+  </h2>
+
+</div>
+
+
+<p>
+這次史懷哲，也讓我完成了好多個第一次。
+</p>
+
+<p>
+第一次當班導師、第一次教話劇、第一次教樂樂棒球、跳繩、傳球爭奪賽，第一次跟小孩一起演戲，第一次教唱歌。
+</p>
+
+<p>
+好多個第一次，也讓我越來越能掌握帶班的節奏。
+</p>
+
+
+<!-- 照片18、19、20 -->
+
+<div class="photo-grid-three">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1KgCFDAACPk53-Wj_X1XNEMfZ02do4gkM&sz=w1200"
+    alt="深坑國小史懷哲">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1HhUuYLUBTRHbbiSs803QEtDAFA-WosmJ&sz=w1200"
+    alt="深坑國小史懷哲">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1GVI9YaQ493SjxGCJbuBf-JLBc5IkMK56&sz=w1200"
+    alt="深坑國小史懷哲">
+
+</div>
+
+
+
+<div class="article-ending">
+
+  <p>
+    <strong>
+      真的很想念大家。
+    </strong>
+  </p>
+
+  <p>
+    下營之後，常常還會突然想起營本部裡的那些畫面，想念大家一起在聯辦的日子。
+  </p>
+
+  <p>
+    從天崩開局，到最後一起撐過三週，我想自己記得最久的，不會只是教過哪些課，而是那些一起熬夜、一起笑、一起累，也一起撐到最後的人。
+  </p>
+
+  <p>
+    <strong>
+      感謝撐到最後的每一位夥伴。
+    </strong>
+  </p>
+
+</div>
+
+
+
+<div class="back-bottom">
+
+  <a href="index.html#journal" class="back-button">
+    <i class="bi bi-arrow-left me-2"></i>
+    返回札記
+  </a>
+
+</div>
+
+
+</main>
+
+
+
+<footer>
+
+  <strong>
+    張語宸 JHANG,YU-CHEN
+  </strong>
+
+  <div class="mt-2">
+    Education · Service · Teaching
+  </div>
+
+  <div class="mt-3 small">
+    © 2026 JHANG,YU-CHEN. All Rights Reserved.
+  </div>
+
+</footer>
+
+
+</body>
+</html>

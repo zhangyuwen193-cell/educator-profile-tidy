@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第二次研討會發表｜2026國際師資培育研討會</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:#1f3553;
+      --navy2:#314c6e;
+      --gold:#b79a5b;
+      --soft:#f7f5ef;
+      --text:#29384b;
+      --muted:#6f7a88;
+      --line:#e8e3d8;
+    }
+
+    * { box-sizing:border-box; }
+
+    body {
+      margin:0;
+      color:var(--text);
+      background:#fff;
+      font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+    }
+
+    .topbar {
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+
+    .topbar-inner {
+      max-width:1100px;
+      margin:auto;
+      min-height:72px;
+      padding:0 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--navy);
+      text-decoration:none;
+      font-weight:900;
+    }
+
+    .brand-mark {
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--navy);
+      color:#fff;
+      font-family:"LXGW WenKai TC",serif;
+    }
+
+    .back-link {
+      color:var(--navy);
+      text-decoration:none;
+      font-weight:800;
+    }
+
+    .article-hero {
+      max-width:1100px;
+      margin:auto;
+      padding:80px 24px 45px;
+    }
+
+    .eyebrow {
+      color:var(--gold);
+      font-weight:900;
+      letter-spacing:.16em;
+      font-size:.85rem;
+      margin-bottom:20px;
+    }
+
+    h1 {
+      margin:0;
+      color:var(--navy);
+      font-family:"LXGW WenKai TC",serif;
+      font-size:clamp(2.7rem,6vw,5rem);
+      line-height:1.25;
+      font-weight:700;
+    }
+
+    .date {
+      margin-top:24px;
+      color:var(--muted);
+      font-weight:700;
+      letter-spacing:.06em;
+    }
+
+    .cover {
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 24px;
+    }
+
+    .cover img {
+      width:100%;
+      max-height:720px;
+      object-fit:cover;
+      object-position:center;
+      border-radius:28px;
+      box-shadow:0 24px 60px rgba(31,53,83,.14);
+    }
+
+    article {
+      max-width:850px;
+      margin:0 auto;
+      padding:70px 24px 40px;
+    }
+
+    article p {
+      margin:0 0 28px;
+      font-size:1.16rem;
+      line-height:2;
+      font-weight:500;
+    }
+
+    .quote-card {
+      margin:42px 0;
+      padding:30px 34px;
+      border-left:4px solid var(--gold);
+      border-radius:0 20px 20px 0;
+      background:var(--soft);
+      color:var(--navy);
+      font-size:1.35rem;
+      line-height:1.8;
+      font-weight:800;
+    }
+
+    .fun-note {
+      margin:48px 0 10px;
+      padding:32px;
+      border-radius:24px;
+      background:var(--navy);
+      color:white;
+      line-height:1.9;
+      font-size:1.08rem;
+    }
+
+    .fun-note strong {
+      color:#e8cb83;
+    }
+
+    .gallery-section {
+      max-width:1100px;
+      margin:0 auto;
+      padding:30px 24px 80px;
+    }
+
+    .gallery-title {
+      color:var(--navy);
+      font-family:"LXGW WenKai TC",serif;
+      font-size:2.2rem;
+      font-weight:700;
+      margin-bottom:28px;
+    }
+
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:20px;
+    }
+
+    .gallery-item {
+      margin:0;
+      overflow:hidden;
+      border-radius:22px;
+      background:#eee;
+      min-height:280px;
+    }
+
+    .gallery-item img {
+      width:100%;
+      height:100%;
+      min-height:280px;
+      max-height:520px;
+      object-fit:cover;
+      display:block;
+      transition:.25s ease;
+    }
+
+    .gallery-item img:hover {
+      transform:scale(1.02);
+    }
+
+    footer {
+      padding:42px 24px;
+      text-align:center;
+      background:#16283f;
+      color:#aeb9c5;
+    }
+
+    @media (max-width: 767px) {
+      .article-hero {
+        padding-top:55px;
+      }
+
+      article p {
+        font-size:1.03rem;
+        line-height:1.9;
+      }
+
+      .cover img {
+        border-radius:20px;
+      }
+
+      .gallery {
+        grid-template-columns:1fr;
+      }
+
+      .gallery-item,
+      .gallery-item img {
+        min-height:220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">張</span>
+        <span>張語宸</span>
+      </a>
+
+      <a class="back-link" href="index.html#journal">
+        <i class="bi bi-arrow-left"></i>
+        回到札記
+      </a>
+    </div>
+  </header>
+
+  <section class="article-hero">
+    <div class="eyebrow">CONFERENCE · TEACHER EDUCATION</div>
+    <h1>第二次研討會發表｜2026國際師資培育研討會</h1>
+    <div class="date">2026.09.18－09.19</div>
+  </section>
+
+  <div class="cover">
+    <img src="https://drive.google.com/thumbnail?id=13wu9PxOCbi7cm9FoaqU8GRyDXEWo6ITQ&sz=w1600" alt="2026國際師資培育研討會">
+  </div>
+
+  <article>
+
+        <p>人生中第二次研討會發表。</p>
+        <p>很感謝麗卿老師的邀請，讓我有機會在國際研討會上，分享大三時期於數位學伴實踐 SEL（社會情緒學習）的課程設計與教學歷程。</p>
+        <p>說實話，發表前真的非常緊張。尤其看到出席我們這場發表的師培學院教授名單時，當下真的看到手都軟了。</p>
+        <p>更讓我印象深刻的是，我的偶像 Dr. Graham 特地跟我說：「I&#x27;m here for you.」聽到的當下覺得非常榮幸。</p>
+        <p>還好，真正站上台後，順利穩住自己，也把想分享的內容完整地表達出來。</p>
+        <p>相較於其他發表者，我的分享或許沒有那麼有深度，但我選擇用淺顯易懂的方式，呈現自己在教學現場的觀察、課程設計與實踐歷程。</p>
+        <p>很開心的是，這樣的分享似乎真的引起了大家的共鳴。國教院研究員在回饋時，不斷提及我分享的內容，讓我感受到，原來自己在教學現場的這些小小嘗試，也能成為值得被看見、被討論的教育實踐。</p>
+        <p>這次的發表也讓我重新回顧自己的教學歷程，從學生的需求出發，到課程設計、實際教學與後續反思，每一個環節都有值得繼續琢磨的地方。</p>
+        <p>第二次研討會發表，順利完成！</p>
+
+    <div class="quote-card">
+      「I'm here for you.」
+    </div>
+
+    <div class="fun-note">
+      最有趣的是，發表結束後，Dr. Graham 還特地過來開玩笑地對我說：
+      <strong>「It's a girl who won't talk to you.」</strong><br><br>
+      怎麼就下這種結論啦！XD 好好笑。
+    </div>
+
+  </article>
+
+  <section class="gallery-section">
+    <h2 class="gallery-title">活動紀錄</h2>
+
+    <div class="gallery">
+        <figure class="gallery-item">
+          <img src="https://drive.google.com/thumbnail?id=13wu9PxOCbi7cm9FoaqU8GRyDXEWo6ITQ&sz=w1600" alt="2026國際師資培育研討會照片 1">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://drive.google.com/thumbnail?id=1FJojdqcTYmtq25jN2X7EewDAXmihsSd9&sz=w1600" alt="2026國際師資培育研討會照片 2">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://drive.google.com/thumbnail?id=1LHLFxOpQze1rmrIaliGRww6QnNg16Ehl&sz=w1600" alt="2026國際師資培育研討會照片 3">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://drive.google.com/thumbnail?id=1RZS2dXHpYyAuXLYXP3BbQ-Fk5QgZuMQn&sz=w1600" alt="2026國際師資培育研討會照片 4">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://drive.google.com/thumbnail?id=1e2SbxntAkhxbFHAJVztUYDZAP6ExZq2i&sz=w1600" alt="2026國際師資培育研討會照片 5">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://drive.google.com/thumbnail?id=1mbTb4qisycYu2iV7vyIdDUENAFrDysMa&sz=w1600" alt="2026國際師資培育研討會照片 6">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://drive.google.com/thumbnail?id=1qXXfljzmlxcrw5BLy6dqpDRvyzxofwiN&sz=w1600" alt="2026國際師資培育研討會照片 7">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://drive.google.com/thumbnail?id=1rQ2UBdjwK1eOSlJ69Bv9O0XjArd2fU8e&sz=w1600" alt="2026國際師資培育研討會照片 8">
+        </figure>
+    </div>
+  </section>
+
+  <footer>
+    張語宸 JHANG, YU-CHEN<br>
+    Education · International · Leadership
+  </footer>
+
+</body>
+</html>

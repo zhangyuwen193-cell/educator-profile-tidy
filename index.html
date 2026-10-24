@@ -1,0 +1,4916 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+  <base target="_top">
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+        content="張語宸個人教育網站｜科技教育、偏鄉教育、國際教育與教育實踐">
+
+  <title>張語宸｜教育實踐者</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet">
+
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
+  rel="stylesheet">
+<style>
+
+/* ========================================
+   全站設定
+======================================== */
+
+:root {
+  --navy:#1f3553;
+  --navy2:#314c6e;
+  --gold:#b79a5b;
+  --soft:#f7f5ef;
+  --text:#29384b;
+  --muted:#6f7a88;
+  --line:#e8e3d8;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  margin:0;
+  font-family:"Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  font-size:18px;
+  color:var(--text);
+  background:#ffffff;
+}
+/* ========================================
+   中文大標題字體
+======================================== */
+
+.hero-name,
+.section-title,
+.quote {
+  font-family: "LXGW WenKai TC", "DFKai-SB", "BiauKai", serif;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   Hero
+======================================== */
+
+.hero {
+  display:flex;
+  align-items:center;
+  padding:100px 0 35px;
+
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(183,154,91,.17),
+      transparent 30%
+    ),
+    white;
+}
+
+.label {
+  color:var(--gold);
+  font-weight:800;
+  letter-spacing:4px;
+  font-size:.9rem;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+.label::before {
+  content:"";
+  width:50px;
+  height:2px;
+  background:var(--gold);
+}
+
+.hero-name {
+  font-size:clamp(4rem,7vw,7rem);
+  font-weight:900;
+  letter-spacing:.08em;
+  color:var(--navy);
+  margin-bottom:10px;
+}
+
+.english-name {
+  letter-spacing:.38em;
+  font-weight:700;
+  margin-bottom:40px;
+}
+
+.hero-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:900;
+  line-height:1.5;
+}
+
+.hero-description {
+  color:var(--muted);
+  line-height:2;
+  font-size:1.08rem;
+  max-width:650px;
+}
+
+.profile-photo {
+  width:70%;
+  height:650px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:35px;
+  box-shadow:0 25px 70px rgba(31,53,83,.18);
+
+  display:block;
+  margin-left:auto;
+}
+.hero-right {
+  transform: translateX(-20px);
+}
+
+
+/* ========================================
+   首頁個人資訊
+======================================== */
+
+.info-row {
+  display: grid;
+  grid-template-columns: 42px 70px 1fr;
+  align-items: start;
+  column-gap: 12px;
+  margin-bottom: 18px;
+}
+
+.info-icon {
+  width: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-title {
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.info-text {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.quick-info {
+  margin-top: 35px;
+  padding-top: 10px;
+}
+/* 
+========================================
+   統計
+======================================== */
+
+.stats {
+  margin-top:35px;
+}
+
+.stat {
+  border-left:3px solid var(--gold);
+  padding-left:15px;
+}
+
+.stat-number {
+  font-size:1.8rem;
+  font-weight:900;
+  color:var(--navy);
+}
+
+.stat-text {
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+
+/* ========================================
+   Section
+======================================== */
+
+section {
+  padding:100px 0;
+  scroll-margin-top:85px;
+}
+
+.soft {
+  background:var(--soft);
+}
+
+.section-title {
+  font-size:clamp(2.2rem,4vw,3.2rem);
+  font-weight:900;
+  color:var(--navy);
+  margin-bottom:20px;
+}
+
+.section-description {
+  color:var(--muted);
+  line-height:2;
+}
+
+
+/* ========================================
+   Education
+======================================== */
+
+.education-card {
+  background:white;
+  border-radius:20px;
+  padding:30px;
+  height:100%;
+  border:1px solid var(--line);
+}
+
+.education-year {
+  color:var(--gold);
+  font-weight:800;
+  font-size:.85rem;
+  letter-spacing:2px;
+}
+
+
+/* ========================================
+   Experience
+======================================== */
+
+.exp-card {
+  background:white;
+  border-radius:22px;
+  padding:30px;
+  height:100%;
+  border:1px solid rgba(0,0,0,.06);
+  transition:.3s;
+}
+
+.exp-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(31,53,83,.10);
+}
+
+.exp-icon {
+  width:52px;
+  height:52px;
+  border-radius:15px;
+  background:#f2ecdf;
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.5rem;
+  margin-bottom:20px;
+}
+
+.exp-item {
+  padding:15px 0;
+  border-bottom:1px solid #eee;
+}
+
+.exp-item:last-child {
+  border-bottom:0;
+}
+
+.exp-date {
+  color:var(--gold);
+  font-size:.85rem;
+  font-weight:700;
+  margin-top:4px;
+}
+
+
+/* ========================================
+   Awards
+======================================== */
+
+.award-item {
+  background:white;
+  border-radius:15px;
+  padding:20px;
+  border:1px solid var(--line);
+  height:100%;
+}
+
+
+/* ========================================
+   International
+======================================== */
+
+.country {
+  font-size:2rem;
+}
+
+.international-card {
+  padding:30px;
+  border-radius:22px;
+  background:white;
+  height:100%;
+  border:1px solid var(--line);
+}
+
+
+/* ========================================
+   News
+======================================== */
+
+.news-card {
+  display:block;
+  height:auto;
+  padding:28px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:22px;
+  text-decoration:none;
+  color:var(--text);
+  transition:.3s;
+}
+
+.news-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(31,53,83,.10);
+  color:var(--text);
+}
+
+.news-source {
+  color:var(--gold);
+  font-size:.85rem;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:12px;
+}
+
+.news-title {
+  font-size:1.2rem;
+  font-weight:800;
+  line-height:1.65;
+  margin-bottom:18px;
+}
+
+.news-more {
+  color:var(--navy);
+  font-weight:700;
+  font-size:.9rem;
+}
+
+.news-card:hover .news-more {
+  color:var(--gold);
+}
+/* ========================================
+   Philosophy
+======================================== */
+
+.philosophy {
+  background:linear-gradient(180deg, #1d3557 0%, #14263f 100%);
+  color:white;
+}
+
+.philosophy .label {
+  justify-content:center;
+  color:#d8bf89;
+}
+
+.philosophy .label::before {
+  background:#d8bf89;
+}
+
+.student-heading {
+  text-align:center;
+  margin:22px auto 18px;
+}
+
+.student-heading h2 {
+  font-size:clamp(2rem, 4vw, 3.3rem);
+  margin-bottom:14px;
+  color:#ffffff;
+}
+
+.student-heading p {
+  max-width:980px;
+  margin:0 auto;
+  font-size:1.2rem;
+  line-height:1.9;
+  color:#d7e1ec;
+}
+
+.student-acronym {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:34px 0 50px;
+}
+
+.student-pill {
+  min-width:88px;
+  padding:12px 16px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.18);
+  box-shadow:0 12px 28px rgba(0,0,0,0.18);
+  text-align:center;
+  backdrop-filter:blur(4px);
+}
+
+.student-pill .letter {
+  display:block;
+  font-size:2rem;
+  font-weight:900;
+  line-height:1;
+  color:#f3cd7a;
+}
+
+.student-pill .word {
+  display:block;
+  margin-top:6px;
+  font-size:.88rem;
+  font-weight:700;
+  letter-spacing:.04em;
+  color:#ffffff;
+}
+
+.student-grid {
+  margin-top:8px;
+}
+
+.student-card {
+  height:100%;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:24px;
+  padding:28px 26px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.16);
+}
+
+.student-card-head {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:16px;
+}
+
+.student-card-letter {
+  flex:0 0 58px;
+  width:58px;
+  height:58px;
+  border-radius:16px;
+  background:#d8bf89;
+  color:#16283f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2rem;
+  font-weight:900;
+}
+
+.student-card-title small {
+  display:block;
+  color:#f5d99d;
+  letter-spacing:.08em;
+  font-weight:700;
+  margin-bottom:4px;
+}
+
+.student-card-title h3 {
+  margin:0;
+  font-size:1.55rem;
+  color:#ffffff;
+}
+
+.student-card p {
+  margin:0;
+  font-size:1.08rem;
+  line-height:1.9;
+  color:#ecf2f8;
+}
+
+.student-summary {
+  margin:42px auto 0;
+  max-width:1120px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:24px;
+  padding:28px 30px;
+  text-align:center;
+  box-shadow:0 18px 40px rgba(0,0,0,0.14);
+}
+
+.student-summary h4 {
+  color:#f3cd7a;
+  font-size:1.55rem;
+  margin-bottom:14px;
+}
+
+.student-summary p {
+  margin:0;
+  color:#eef4f8;
+  font-size:1.12rem;
+  line-height:2;
+}
+
+
+/* ========================================
+   Footer
+======================================== */
+
+footer {
+  background:#16283f;
+  color:#aeb9c5;
+  padding:45px;
+  text-align:center;
+}
+
+footer strong {
+  color:white;
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+.info-title,
+.info-text {
+  font-size: 1.3rem;
+}
+
+/* 個人簡介 */
+.section-description {
+  font-size: 1.3rem !important;
+}
+
+/* 學歷 */
+.education-year {
+  font-size: 1rem;
+}
+
+/* 學校名稱 */
+.education-card h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* 學校下面的說明 */
+.education-card p {
+  font-size: 1.25rem;
+}
+
+/* 經歷 */
+.exp-card {
+  font-size: 1.3rem;
+}
+
+.exp-date {
+  font-size: 1rem;
+}
+
+/* 教育見習 */
+.international-card p {
+  font-size: 1.15rem;
+}
+
+/* 獲獎與認證 */
+.award-item {
+  font-size: 1.3rem;
+}
+
+/* 新聞 */
+.news-source {
+  font-size: 1rem;
+}
+
+.news-title {
+  font-size: 1.5rem;
+}
+
+.news-more {
+  font-size: 1.05rem;
+}
+
+/* 導覽列 */
+.nav-link {
+  font-size: 1.05rem;
+}
+
+
+/* 楷體標題全部加粗 */
+.hero-name,
+.section-title,
+.quote {
+  font-family: "LXGW WenKai TC", "DFKai-SB", "BiauKai", serif !important;
+  font-weight: 700 !important;
+  -webkit-text-stroke: 1.05px currentColor;
+}
+/* 內文字體稍微加粗 */
+.hero-description,
+.section-description,
+.info-text,
+.education-card p,
+.exp-card,
+.international-card p,
+.award-item,
+.news-more {
+  font-weight: 700 !important;
+}
+
+/* 經歷名稱粗細 */
+.exp-item strong {
+  font-weight: 600 !important;
+}
+
+/* 經歷日期粗細 */
+.exp-date {
+  font-weight: 600 !important;
+}
+
+/* 平板版首頁資訊強制不換行 */
+@media (min-width: 992px) and (max-width: 1366px) {
+  .quick-info .info-text {
+    white-space: nowrap !important;
+  }
+}
+/* 教育理念區塊響應式 */
+@media (max-width: 991px) {
+  .student-heading p {
+    font-size: 1.05rem !important;
+  }
+
+  .student-pill {
+    min-width: 74px;
+    padding: 10px 12px;
+  }
+
+  .student-pill .letter {
+    font-size: 1.65rem;
+  }
+
+  .student-pill .word {
+    font-size: .8rem;
+  }
+
+  .student-card {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  .student-card-head {
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .student-card-letter {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
+    font-size: 1.7rem;
+  }
+
+  .student-card-title h3 {
+    font-size: 1.3rem;
+  }
+
+  .student-card p,
+  .student-summary p {
+    font-size: 1rem !important;
+    line-height: 1.85 !important;
+  }
+
+  .student-summary {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+}
+
+/* STUDENT 最後一格：Thrive 置中 */
+.student-card.thrive-card {
+  text-align: center;
+}
+
+.student-card.thrive-card .student-card-head {
+  justify-content: center;
+}
+
+.student-card.thrive-card .student-card-title {
+  text-align: center;
+}
+
+/* STUDENT 教育理念發展脈絡 */
+.student-process {
+  margin-top: 52px;
+  padding: 34px 28px;
+  border-radius: 28px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+.student-process-title {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.student-process-title h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.student-process-title p {
+  margin: 0;
+  color: #cbd7e3;
+  font-size: 1rem;
+}
+
+.student-process-flow {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.process-step {
+  flex: 1 1 125px;
+  min-width: 125px;
+  max-width: 175px;
+  padding: 18px 12px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.15);
+  text-align: center;
+}
+
+.process-step .process-letter {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 10px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d8bf89;
+  color: #16283f;
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.process-step strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.process-step span {
+  display: block;
+  color: #f3cd7a;
+  font-size: .78rem;
+  letter-spacing: .04em;
+}
+
+.process-arrow {
+  align-self: center;
+  color: #d8bf89;
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.student-process-caption {
+  margin: 26px auto 0;
+  max-width: 1150px;
+  text-align: center;
+  color: #edf3f8;
+  font-size: 1.08rem;
+  line-height: 2;
+}
+
+@media (max-width: 767px) {
+  .student-card.thrive-card .student-card-head {
+    flex-direction: column;
+  }
+
+  .student-process {
+    padding: 24px 16px;
+  }
+
+  .student-process-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .process-step {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .process-arrow {
+    transform: rotate(90deg);
+    text-align: center;
+    line-height: 1;
+    padding: 2px 0;
+  }
+
+  .student-process-caption {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+}
+
+/* 電腦版：個人簡介內文放大 */
+@media (min-width: 992px) {
+  #about p {
+    font-size: 1.7rem !important;
+    line-height: 2 !important;
+  }
+}
+
+/* ========================================
+   電腦版設定
+======================================== */
+@media (min-width: 992px) {
+
+  /* 下面各區塊整體加寬 */
+  #about .container,
+  #education .container,
+  #experience .container,
+  #awards .container,
+  #international .container,
+  #news .container {
+    max-width: 1800px !important;
+  }
+
+  /* 首頁名字 */
+  .hero-name {
+    font-size: 7.7rem !important;
+  }
+
+  /* 英文名字 */
+  .english-name {
+    font-size: 1.4rem !important;
+  }
+
+  /* 心存善念 盡力而為 */
+  .hero-title {
+    font-size: 2.8rem !important;
+  }
+
+  /* 首頁介紹 */
+  .hero-description {
+    font-size: 1.7rem !important;
+  }
+
+  /* 現職、學歷、專長、信箱 */
+  .info-title {
+    font-size: 2rem !important;
+  }
+
+  .info-text {
+    font-size: 1.7rem !important;
+  }
+
+  /* 學歷英文分類 */
+  #education .education-year {
+    font-size: 1.25rem !important;
+  }
+
+  /* 學校名稱 */
+  #education .education-card h4 {
+    font-size: 1.7em !important;
+    font-weight: 700 !important;
+  }
+
+  /* 學校下面說明 */
+  #education .education-card p {
+    font-size: 1.5rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* 經歷 */
+  #experience .exp-card {
+    font-size: 1.7rem !important;
+  }
+
+  #experience .exp-card h3 {
+    font-size: 2.1rem !important;
+  }
+
+  /* 教育見習 */
+  #international .international-card {
+    font-size: 2.2rem !important;
+  }
+
+  /* 獲獎與專業認證 */
+  #awards .award-item {
+    font-size: 1.6rem !important;
+  }
+
+  /* 新聞 */
+  #news .news-title {
+    font-size: 1.8rem !important;
+  }
+
+  #news .news-source,
+  #news .news-more {
+    font-size: 1.5rem !important;
+  }
+
+}
+
+
+/* ========================================
+   經歷：圖示與標題並排
+======================================== */
+
+.exp-card {
+  position: relative;
+}
+
+.exp-card .exp-icon {
+  display: inline-flex;
+  margin-bottom: 0;
+  margin-right: 18px;
+  vertical-align: middle;
+}
+
+.exp-card h3 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+
+/* ========================================
+   教育見習：手機直排
+======================================== */
+
+@media (max-width: 767px) {
+
+  #international .row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #international .col-12 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  #international .international-card {
+    width: 100% !important;
+  }
+
+}
+
+
+/* 首頁＋個人簡介灰字改黑色 */
+.hero-description,
+.info-text,
+#about .section-description {
+  color: #222222 !important;
+}
+/* 電腦版：首頁現職、學歷、專長、信箱全部不換行 */
+@media (min-width: 992px) {
+  .quick-info .info-text {
+    white-space: nowrap !important;
+  }
+}
+/* 預設：手機版副本不顯示 */
+.quick-info-mobile {
+  display: none;
+}
+
+
+
+/* ========================================
+   札記
+======================================== */
+
+.journal-card {
+  display:block;
+  height:100%;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:22px;
+  overflow:hidden;
+  text-decoration:none;
+  color:var(--text);
+  transition:.3s;
+}
+
+.journal-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(31,53,83,.10);
+  color:var(--text);
+}
+
+.journal-image {
+  width:100%;
+  height:300px;
+  overflow:hidden;
+  background:#eee;
+}
+
+.journal-image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.journal-card:hover .journal-image img {
+  transform:scale(1.04);
+}
+
+.journal-content {
+  padding:28px;
+}
+
+.journal-date {
+  color:var(--gold);
+  font-size:1rem;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:12px;
+}
+
+.journal-content h3 {
+  color:var(--navy);
+  font-size:1.6rem;
+  font-weight:800;
+  line-height:1.55;
+  margin-bottom:15px;
+}
+
+.journal-content p {
+  font-size:1.15rem;
+  line-height:1.8;
+  color:#444;
+}
+
+.journal-more {
+  margin-top:20px;
+  color:var(--navy);
+  font-weight:800;
+}
+
+.journal-card:hover .journal-more {
+  color:var(--gold);
+}
+
+
+/* 電腦版教育札記加寬 */
+@media (min-width:992px) {
+
+  #journal .container {
+    max-width:1800px !important;
+  }
+
+}
+/* ========================================
+   個人資料展開 / 收合
+======================================== */
+
+.profile-details {
+  display: none;
+}
+
+.profile-details.show {
+  display: block;
+}
+
+
+/* 按鈕區 */
+.profile-toggle-area {
+  padding: 45px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+
+/* 按鈕 */
+.profile-toggle-btn {
+  min-width: 320px;
+
+  padding: 18px 35px;
+
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+
+  background: white;
+  color: var(--navy);
+
+  font-size: 1.5rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+
+/* icon */
+.profile-toggle-btn i {
+  margin-left: 12px;
+  transition: transform .3s;
+}
+
+
+/* hover */
+.profile-toggle-btn:hover {
+  background: var(--navy);
+  color: white;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(31,53,83,.12);
+}
+
+
+/* 展開後箭頭翻轉 */
+.profile-toggle-btn.open i {
+  transform: rotate(180deg);
+}
+
+  @media (max-width: 767px) {
+
+  .profile-toggle-btn {
+    font-size: 1.2rem !important;
+  }
+
+}
+
+/* ========================================
+   新版固定側欄導覽
+======================================== */
+
+:root {
+  --sidebar-width: 285px;
+}
+
+/* 舊的頂部導覽不再使用 */
+.navbar {
+  display: none !important;
+}
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: var(--sidebar-width);
+  height: 100vh;
+
+  padding: 26px 18px 22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #263f68 0%,
+      #1f365b 58%,
+      #192f50 100%
+    );
+
+  color: white;
+
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+
+  box-shadow:
+    10px 0 32px rgba(23,45,76,.10);
+}
+
+.side-brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 8px 56px 24px 10px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.12);
+
+  cursor: pointer;
+}
+
+.side-brand-mark {
+  width: 50px;
+  height: 50px;
+
+  flex: 0 0 50px;
+
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #d8b45e;
+  color: #243e67;
+
+  font-family:
+    "LXGW WenKai TC",
+    "DFKai-SB",
+    serif;
+
+  font-size: 1.55rem;
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.12);
+}
+
+.side-brand-name {
+  color: white;
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+}
+
+.side-brand-sub {
+  margin-top: 3px;
+
+  color: #afbed3;
+
+  font-size: .69rem;
+  font-weight: 700;
+
+  letter-spacing: .10em;
+}
+
+.side-nav-label {
+  margin: 24px 14px 10px;
+
+  color: #8ea3bf;
+
+  font-size: .73rem;
+  font-weight: 800;
+
+  letter-spacing: .14em;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.side-link,
+.side-group-title {
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 0 15px;
+
+  border-radius: 12px;
+
+  color: #dce6f3;
+  text-decoration: none;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  transition: .22s ease;
+}
+
+.side-link i,
+.side-group-title i {
+  width: 22px;
+
+  text-align: center;
+
+  font-size: 1.15rem;
+}
+
+.side-link:hover {
+  color: white;
+
+  background:
+    rgba(255,255,255,.07);
+}
+
+.side-link.active {
+  position: relative;
+
+  color: white;
+
+  background: #415f8a;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255,255,255,.035);
+}
+
+.side-link.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+
+  width: 4px;
+
+  border-radius:
+    0 5px 5px 0;
+
+  background: #dfba60;
+}
+
+.side-nav-group {
+  margin: 4px 0 9px;
+  padding: 7px 0 10px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255,255,255,.035);
+}
+
+.side-group-title {
+  min-height: 42px;
+
+  color: white;
+}
+
+.side-sub-link {
+  position: relative;
+
+  display: block;
+
+  margin-left: 44px;
+
+  padding:
+    8px 12px 8px 17px;
+
+  border-left:
+    1px solid
+    rgba(255,255,255,.14);
+
+  color: #afbed2;
+
+  text-decoration: none;
+
+  font-size: .91rem;
+  font-weight: 650;
+
+  transition: .20s ease;
+}
+
+.side-sub-link:hover,
+.side-sub-link.active {
+  color: #f1d07c;
+}
+
+.side-sub-link.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: -2px;
+  top: 8px;
+  bottom: 8px;
+
+  width: 3px;
+
+  border-radius: 3px;
+
+  background: #dfba60;
+}
+
+.side-footer {
+  margin-top: auto;
+
+  padding: 24px 14px 5px;
+
+  color: #c2cede;
+
+  font-size: .78rem;
+  line-height: 1.7;
+}
+
+.side-footer small {
+  color: #8398b4;
+}
+
+.site-main {
+  margin-left: var(--sidebar-width);
+
+  width:
+    calc(100% - var(--sidebar-width));
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+.mobile-topbar,
+.sidebar-overlay {
+  display: none;
+}
+
+
+
+
+/* ========================================
+   全尺寸固定側欄：手機 / 平板 / 電腦都一直存在
+======================================== */
+
+.side-nav {
+  transform: none !important;
+}
+
+.site-main {
+  margin-left: var(--sidebar-width) !important;
+  width: calc(100% - var(--sidebar-width)) !important;
+  padding-top: 0 !important;
+}
+
+.mobile-topbar,
+.sidebar-overlay {
+  display: none !important;
+}
+
+@media (max-width: 991px) {
+
+  :root {
+    --sidebar-width: 230px;
+  }
+
+  .side-nav {
+    width: var(--sidebar-width) !important;
+    display: flex !important;
+    transform: none !important;
+  }
+
+  .site-main {
+    margin-left: var(--sidebar-width) !important;
+    width: calc(100% - var(--sidebar-width)) !important;
+    padding-top: 0 !important;
+  }
+
+  .side-brand {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .side-brand-mark {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+    font-size: 1.25rem;
+  }
+
+  .side-brand-name {
+    font-size: 1.15rem;
+  }
+
+  .side-brand-sub {
+    font-size: .6rem;
+  }
+
+  .side-link,
+  .side-group-title {
+    font-size: .92rem;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .side-sub-link {
+    margin-left: 36px;
+    font-size: .84rem;
+  }
+
+  .mobile-topbar,
+  .sidebar-overlay {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   首頁響應式最終設定（集中管理）
+======================================== */
+
+/* 預設：手機資訊隱藏 */
+.quick-info-mobile {
+  display: none;
+}
+
+/* 電腦版 */
+@media (min-width: 992px) {
+  .hero {
+    padding-top: 85px !important;
+  }
+
+  .hero-left {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    transform: translateX(25px) !important;
+    overflow: visible !important;
+  }
+
+  .hero-right {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    transform: translate(-20px, -70px) !important;
+  }
+
+  .profile-photo {
+    width: 56% !important;
+    height: 500px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 26px !important;
+  }
+
+  .quick-info-desktop {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+    z-index: 10 !important;
+    margin-top: 35px !important;
+  }
+
+  .quick-info-mobile {
+    display: none !important;
+  }
+
+  section {
+    scroll-margin-top: 20px;
+  }
+}
+
+/* 手機版 */
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 50px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .hero-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .hero .row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    --bs-gutter-x: 10px !important;
+  }
+
+  .hero-left {
+    width: 55% !important;
+    max-width: 55% !important;
+    flex: 0 0 55% !important;
+    transform: none !important;
+    min-width: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 4px !important;
+  }
+
+  .hero-right {
+    width: 45% !important;
+    max-width: 45% !important;
+    flex: 0 0 45% !important;
+    transform: none !important;
+    min-width: 0 !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    margin-top: 55px !important;
+  }
+
+  .photo-wrapper {
+    width: 100% !important;
+  }
+
+.profile-photo {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+  margin: 0 auto !important;
+  border-radius: 16px !important;
+}
+
+  .hero-name {
+    font-size: 3.2rem !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+  }
+
+  .english-name {
+    font-size: .7rem !important;
+    letter-spacing: .2em !important;
+    margin-bottom: 22px !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-title {
+    font-size: 1.55rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .hero-description {
+    font-size: .92rem !important;
+    line-height: 1.8 !important;
+  }
+
+  .quick-info-desktop {
+    display: none !important;
+  }
+
+  .quick-info-mobile {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-top: 30px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .quick-info-mobile .info-row {
+    display: grid !important;
+    grid-template-columns: 28px 55px minmax(0, 1fr) !important;
+    column-gap: 8px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .quick-info-mobile .info-title {
+    font-size: 1rem !important;
+  }
+
+  .quick-info-mobile .info-text {
+    font-size: .95rem !important;
+    line-height: 1.75 !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+}
+
+
+/* 手機裝置：只調整首頁最上方個人照片，不動其他版面 */
+@media (pointer: coarse) and (max-width: 1200px) {
+  .hero-right .profile-photo {
+    width: 82% !important;
+    max-width: 82% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+
+
+/* ========================================
+   電腦版側欄：品牌區右上角收合鍵
+======================================== */
+.desktop-sidebar-toggle,
+.desktop-sidebar-reopen {
+  display: none;
+}
+
+@media (min-width: 992px) {
+
+  .desktop-sidebar-toggle {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 5;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.12);
+    color: #ffffff;
+
+    font-size: 1rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+      background .2s ease,
+      transform .2s ease;
+  }
+
+  .desktop-sidebar-toggle:hover {
+    background: rgba(255,255,255,.22);
+  }
+
+  .desktop-sidebar-toggle:active {
+    transform: scale(.95);
+  }
+
+  .side-nav,
+  .site-main {
+    transition:
+      transform .28s ease,
+      margin-left .28s ease,
+      width .28s ease !important;
+  }
+
+  body.desktop-sidebar-collapsed .side-nav {
+    transform: translateX(-100%) !important;
+  }
+
+  body.desktop-sidebar-collapsed .site-main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .desktop-sidebar-reopen {
+    position: fixed;
+    top: 18px;
+    left: 14px;
+    z-index: 2300;
+
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+    border-radius: 12px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #263f68;
+    color: #ffffff;
+
+    font-size: 1.15rem;
+    line-height: 1;
+
+    box-shadow: 0 10px 24px rgba(23,45,76,.18);
+
+    cursor: pointer;
+  }
+
+  body.desktop-sidebar-collapsed .desktop-sidebar-reopen {
+    display: flex;
+  }
+
+  body.desktop-sidebar-collapsed .hero-container,
+  body.desktop-sidebar-collapsed #about .container,
+  body.desktop-sidebar-collapsed #education .container,
+  body.desktop-sidebar-collapsed #experience .container,
+  body.desktop-sidebar-collapsed #awards .container,
+  body.desktop-sidebar-collapsed #international .container,
+  body.desktop-sidebar-collapsed #journal .container,
+  body.desktop-sidebar-collapsed #news .container,
+  body.desktop-sidebar-collapsed #videos .container,
+  body.desktop-sidebar-collapsed #stickers .container,
+  body.desktop-sidebar-collapsed #philosophy .container {
+    max-width: 1900px !important;
+  }
+}
+
+/* ========================================
+   手機版側欄：X 跟著側欄收進去
+======================================== */
+.mobile-sidebar-toggle,
+.mobile-sidebar-reopen {
+  display: none;
+}
+
+@media (pointer: coarse) and (max-width: 1200px) {
+
+  .side-nav {
+    transition: transform .28s ease !important;
+  }
+
+  /* X：放在側欄品牌區右上角，會跟著側欄一起滑走 */
+  .mobile-sidebar-toggle {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.12);
+    color: #ffffff;
+
+    font-size: 1.15rem;
+    line-height: 1;
+
+    cursor: pointer;
+  }
+
+  .mobile-sidebar-toggle:active {
+    transform: scale(.95);
+  }
+
+  /* 收起後才顯示左上角漢堡鍵 */
+  .mobile-sidebar-reopen {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 2300;
+
+    width: 48px;
+    height: 48px;
+
+    border: 0;
+    border-radius: 14px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #263f68;
+    color: #ffffff;
+
+    font-size: 1.45rem;
+    line-height: 1;
+
+    box-shadow: 0 10px 28px rgba(23,45,76,.22);
+  }
+
+  body.mobile-sidebar-collapsed .side-nav {
+    transform: translateX(-100%) !important;
+  }
+
+  body.mobile-sidebar-collapsed .site-main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  body.mobile-sidebar-collapsed .mobile-sidebar-reopen {
+    display: flex;
+  }
+}
+
+
+/* ========================================
+   貼圖小舖
+======================================== */
+.sticker-shop {
+  background:#ffffff;
+}
+
+.sticker-shop .container {
+  max-width:1800px;
+}
+
+.sticker-shop-intro {
+  max-width:900px;
+}
+
+.sticker-card {
+  height:100%;
+  background:#ffffff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:34px;
+  box-shadow:0 14px 36px rgba(31,53,83,.08);
+  transition:.28s ease;
+}
+
+.sticker-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 22px 50px rgba(31,53,83,.13);
+}
+
+.sticker-card-icon {
+  width:72px;
+  height:72px;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:22px;
+  background:#f2ecdf;
+  color:var(--gold);
+  font-size:2rem;
+}
+
+.sticker-card h3 {
+  margin-bottom:12px;
+  color:var(--navy);
+  font-size:1.8rem;
+  font-weight:800;
+}
+
+.sticker-card p {
+  margin-bottom:26px;
+  color:var(--muted);
+  font-size:1.1rem;
+  line-height:1.8;
+}
+
+.sticker-shop-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 20px;
+  border-radius:999px;
+  background:var(--navy);
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:800;
+  transition:.22s ease;
+}
+
+.sticker-shop-btn:hover {
+  background:var(--gold);
+  color:#ffffff;
+  transform:translateY(-2px);
+}
+
+@media (max-width:767px) {
+  .sticker-card {
+    padding:24px 20px;
+  }
+
+  .sticker-card h3 {
+    font-size:1.45rem;
+  }
+
+  .sticker-card p {
+    font-size:1rem;
+  }
+}
+
+</style>
+
+<link rel="stylesheet" href="tidy.css">
+</head>
+
+<body>
+
+
+<!-- ======================================
+SIDE NAVIGATION
+====================================== -->
+
+<button
+  id="desktopSidebarReopen"
+  class="desktop-sidebar-reopen"
+  type="button"
+  aria-label="展開側欄"
+  aria-expanded="false">
+  <i class="bi bi-chevron-right"></i>
+</button>
+
+<button
+  id="mobileSidebarReopen"
+  class="mobile-sidebar-reopen"
+  type="button"
+  aria-label="展開側欄"
+  aria-expanded="false">
+  <i class="bi bi-list"></i>
+</button>
+
+<aside class="side-nav" id="sideNav">
+
+  <div class="side-brand" onclick="goToSection('home')">
+    <div class="side-brand-mark">張</div>
+
+    <div>
+      <div class="side-brand-name">張語宸</div>
+      <div class="side-brand-sub">EDUCATION PORTFOLIO</div>
+    </div>
+
+    <button
+      id="desktopSidebarToggle"
+      class="desktop-sidebar-toggle"
+      type="button"
+      aria-label="收起側欄"
+      aria-expanded="true"
+      onclick="event.stopPropagation();">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <button
+      id="mobileSidebarToggle"
+      class="mobile-sidebar-toggle"
+      type="button"
+      aria-label="收起側欄"
+      aria-expanded="true"
+      onclick="event.stopPropagation();">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+
+  <div class="side-nav-label">MAIN MENU</div>
+
+  <nav class="side-menu">
+
+    <a class="side-link active" data-section="home"
+       href="#home">
+      <i class="bi bi-house-door"></i>
+      <span>首頁</span>
+    </a>
+
+    <div class="side-nav-group">
+      <div class="side-group-title">
+        <i class="bi bi-person"></i>
+        <span>個人資料</span>
+      </div>
+
+      <a class="side-sub-link" data-section="about"
+         href="#about">
+        個人簡介
+      </a>
+
+      <a class="side-sub-link" data-section="education"
+         href="#education">
+        學歷
+      </a>
+
+      <a class="side-sub-link" data-section="experience"
+         href="#experience">
+        經歷
+      </a>
+
+      <a class="side-sub-link" data-section="awards"
+         href="#awards">
+        獲獎與認證
+      </a>
+
+      <a class="side-sub-link" data-section="international"
+         href="#international">
+        教育見習
+      </a>
+    </div>
+
+    <a class="side-link" data-section="journal"
+       href="#journal">
+      <i class="bi bi-journal-text"></i>
+      <span>札記</span>
+    </a>
+
+    <a class="side-link" data-section="news"
+       href="#news">
+      <i class="bi bi-newspaper"></i>
+      <span>教育新聞</span>
+    </a>
+
+    <a class="side-link" data-section="ntnu-news"
+       href="#ntnu-news">
+      <i class="bi bi-building"></i>
+      <span>師大新聞</span>
+    </a>
+
+    <a class="side-link" data-section="videos"
+       href="#videos">
+      <i class="bi bi-play-btn"></i>
+      <span>影音專區</span>
+    </a>
+
+    <a class="side-link" data-section="stickers"
+       href="#stickers">
+      <i class="bi bi-chat-heart"></i>
+      <span>貼圖小舖</span>
+    </a>
+
+    <a class="side-link" data-section="philosophy"
+       href="#philosophy">
+      <i class="bi bi-lightbulb"></i>
+      <span>教育理念</span>
+    </a>
+
+  </nav>
+
+  <div class="side-footer">
+    <div>JHANG, YU-CHEN</div>
+    <small>Education · Technology · Practice</small>
+  </div>
+
+</aside>
+
+</div>
+
+<main class="site-main">
+
+<!-- ======================================
+HERO
+====================================== -->
+
+<header class="hero" id="home">
+
+  <div class="container-fluid hero-container">
+
+    <div class="row align-items-start g-5">
+
+
+      <!-- ================================
+           左側：名字＋理念＋電腦版資訊
+      ================================= -->
+
+      <div class="col-6 hero-left">
+
+        <div class="label">
+          EDUCATOR PROFILE
+        </div>
+
+        <h1 class="hero-name">
+          張語宸
+        </h1>
+
+        <div class="english-name">
+          JHANG,YU-CHEN
+        </div>
+
+        <h2 class="hero-title">
+          心存善念 盡力而為
+        </h2>
+
+        <p class="hero-description">
+          我相信教育不只是知識傳遞，<br>
+          而是讓學生看到自己的光芒。
+        </p>
+
+
+        <!-- ================================
+             電腦版：現職／學歷／專長／信箱
+        ================================= -->
+
+        <div class="quick-info quick-info-desktop">
+
+          <!-- 現職 -->
+          <div class="info-row">
+
+            <div class="info-icon">
+              <i class="bi bi-person"></i>
+            </div>
+
+            <div class="info-title">
+              現職
+            </div>
+
+            <div class="info-text">
+              臺師大PASSION學友會｜會長<br>
+              臺師大科技與工程學院｜學生代表<br>
+              臺師大師資培育會議｜學生代表<br>
+              臺師大學生事務會議｜學生代表<br>
+              臺師大校園景觀規畫小組｜學生代表<br>
+              臺師大教學媒體與應用(教)｜教學助理<br>
+              臺師大職業教育訓練暨生涯規劃(教)｜教學助理<br>
+              臺師大體育(扯鈴)｜教學助理<br>
+              臺師大科技系116級畢業專展｜總務組長<br>
+              臺師大師資生聯會｜顧問(退休會長)<br>
+              臺北市文昌國小扯鈴社｜教練<br>
+              新北市秀朗國小扯鈴社｜教練
+            </div>
+
+          </div>
+
+
+          <!-- 學歷 -->
+          <div class="info-row">
+
+            <div class="info-icon">
+              <i class="bi bi-mortarboard"></i>
+            </div>
+
+            <div class="info-title">
+              學歷
+            </div>
+
+            <div class="info-text">
+              國立臺灣師範大學｜科技應用與人力資源發展學系四年級<br>
+              國立臺灣師範大學｜小學師資培育公費生<br>
+              國立臺灣師範大學｜中等二階師培生<br>
+              國立臺灣師範大學｜雙語師資培育生<br>
+              國立臺灣師範大學｜PASSION偏鄉優質教育學分學程 修畢<br>
+              國立中科實驗高級中學<br>
+              臺中市大雅區陽明國民小學
+            </div>
+
+          </div>
+
+
+          <!-- 專長 -->
+          <div class="info-row">
+
+            <div class="info-icon">
+              <i class="bi bi-star"></i>
+            </div>
+
+            <div class="info-title">
+              專長
+            </div>
+
+            <div class="info-text">
+              偏鄉教育、扯鈴、跳繩、長跑、健身、自行車
+            </div>
+
+          </div>
+
+
+          <!-- 信箱 -->
+          <div class="info-row">
+
+            <div class="info-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+
+            <div class="info-title">
+              信箱
+            </div>
+
+            <div class="info-text">
+              <a href="mailto:41271106H@ntnu.edu.tw">
+                41271106H@ntnu.edu.tw
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ================================
+           右側照片
+      ================================= -->
+
+      <div class="col-6 hero-right">
+
+        <div class="photo-wrapper">
+
+          <img
+            src="https://drive.google.com/thumbnail?id=1sSdpO1-4pQKcyrdKAppt0qUFcLQikh1d&sz=w1600"
+            class="profile-photo"
+            alt="張語宸">
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ================================
+           手機版：全寬資訊
+      ================================= -->
+
+      <div class="quick-info quick-info-mobile">
+
+        <!-- 現職 -->
+        <div class="info-row">
+
+          <div class="info-icon">
+            <i class="bi bi-person"></i>
+          </div>
+
+          <div class="info-title">
+            現職
+          </div>
+
+          <div class="info-text">
+            臺師大PASSION學友會｜會長<br>
+            臺師大科技與工程學院｜學生代表<br>
+            臺師大師資培育會議｜學生代表<br>
+            臺師大學生事務會議｜學生代表<br>
+            臺師大校園景觀規畫小組｜學生代表<br>
+            臺師大教學媒體與應用(教)｜教學助理<br>
+            臺師大職業教育訓練暨生涯規劃(教)｜教學助理<br>
+            臺師大體育(扯鈴)｜教學助理<br>
+            臺師大科技系116級畢業專展｜總務組長<br>
+            臺師大師資生聯會｜顧問(退休會長)<br>
+            臺北市文昌國小扯鈴社｜教練<br>
+            新北市秀朗國小扯鈴社｜教練
+          </div>
+
+        </div>
+
+
+        <!-- 學歷 -->
+        <div class="info-row">
+
+          <div class="info-icon">
+            <i class="bi bi-mortarboard"></i>
+          </div>
+
+          <div class="info-title">
+            學歷
+          </div>
+
+          <div class="info-text">
+            國立臺灣師範大學｜科技應用與人力資源發展學系四年級<br>
+            國立臺灣師範大學｜小學師資培育公費生<br>
+            國立臺灣師範大學｜中等二階師培生<br>
+            國立臺灣師範大學｜雙語師資培育生<br>
+            國立臺灣師範大學｜PASSION偏鄉優質教育學分學程 修畢<br>
+            國立中科實驗高級中學<br>
+            臺中市大雅區陽明國民小學
+          </div>
+
+        </div>
+
+
+        <!-- 專長 -->
+        <div class="info-row">
+
+          <div class="info-icon">
+            <i class="bi bi-star"></i>
+          </div>
+
+          <div class="info-title">
+            專長
+          </div>
+
+          <div class="info-text">
+            偏鄉教育、扯鈴、跳繩、長跑、健身、自行車
+          </div>
+
+        </div>
+
+
+        <!-- 信箱 -->
+        <div class="info-row">
+
+          <div class="info-icon">
+            <i class="bi bi-envelope"></i>
+          </div>
+
+          <div class="info-title">
+            信箱
+          </div>
+
+          <div class="info-text">
+            <a href="mailto:41271106H@ntnu.edu.tw">
+              41271106H@ntnu.edu.tw
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</header>
+<!-- ======================================
+PROFILE DETAILS TOGGLE
+====================================== -->
+
+<div class="profile-toggle-area">
+
+  <button
+    id="profileToggleBtn"
+    class="profile-toggle-btn"
+    onclick="toggleProfileDetails()">
+
+    <span id="profileToggleText">
+      查看完整個人經歷
+    </span>
+
+    <i
+      id="profileToggleIcon"
+      class="bi bi-chevron-down">
+    </i>
+
+  </button>
+
+</div>
+
+
+<div id="profileDetails" class="profile-details">
+<!-- ======================================
+ABOUT
+====================================== -->
+
+<section id="about" class="soft">
+
+  <div class="container">
+
+    <div class="label">
+      ABOUT ME
+    </div>
+
+
+    <div class="row g-5">
+
+
+      <div class="col-lg-7">
+
+        <h2 class="section-title">
+          個人簡介
+        </h2>
+
+      </div>
+
+
+      <div class="col-lg-10">
+
+        <p class="section-description fs-5">
+
+          出生於臺中市大雅區的農村，在田野與自然中成長。高中就讀中科實中，物理總成績名列全校前1%、數學前4%，平時也喜歡協助同學理解理科問題，並在分享與教學的過程中，逐漸找到自己對教育的熱忱。高中期間擔任志工康輔社社長，從服務中體會與人連結的價值。進入大學後，持續投入偏鄉營隊、扯鈴教學與國際交流，在不同教育場域中實踐所學。我相信，教育不只是知識的傳遞，更是陪伴孩子探索世界、發現自己的過程。
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================
+EDUCATION
+====================================== -->
+
+<section id="education">
+
+  <div class="container">
+
+    <div class="label">
+      EDUCATION
+    </div>
+
+
+    <h2 class="section-title">
+      學歷
+    </h2>
+
+
+    <div class="row g-4 mt-3">
+
+
+      <div class="col-lg-4">
+
+        <div class="education-card">
+
+          <div class="education-year">
+            ELEMENTARY SCHOOL
+          </div>
+
+          <h4 class="mt-3">
+            臺中市大雅區陽明國小
+          </h4>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-lg-4">
+
+        <div class="education-card">
+
+          <div class="education-year">
+            SECONDARY EDUCATION
+          </div>
+
+          <h4 class="mt-3">
+            國立中科實驗高級中學
+          </h4>
+
+          <p class="text-secondary">
+            國中部<br>
+            高中部市長獎畢業
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-lg-4">
+
+        <div class="education-card">
+
+          <div class="education-year">
+            UNIVERSITY
+          </div>
+
+          <h4 class="mt-3">
+            國立臺灣師範大學
+          </h4>
+
+          <p class="text-secondary">
+            科技應用與人力資源發展學系
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================
+EXPERIENCE
+====================================== -->
+
+<section id="experience" class="soft">
+
+  <div class="container">
+
+    <div class="label">
+      EXPERIENCE
+    </div>
+
+
+    <h2 class="section-title">
+      經歷
+    </h2>
+
+
+    <div class="row g-4 mt-3">
+
+
+
+      <!-- 領導經歷 -->
+
+      <div class="col-lg-6 order-lg-1">
+
+        <div class="exp-card">
+
+          <div class="exp-icon">
+            <i class="bi bi-people"></i>
+          </div>
+
+
+          <h3>
+            社團與幹部經歷
+          </h3>
+          <div class="exp-item">
+
+            <strong>
+              臺師大PASSION學友會｜會長
+            </strong>
+
+            <div class="exp-date">
+              2026.08 – 至今
+            </div>
+
+          </div>
+
+          <div class="exp-item">
+
+            <strong>
+              臺師大科技與工程學院｜學生代表
+            </strong>
+
+            <div class="exp-date">
+              2026.08 – 至今
+            </div>
+
+          </div>
+          <div class="exp-item">
+
+            <strong>
+              臺師大師資培育會議｜學生代表
+            </strong>
+
+            <div class="exp-date">
+              2026.08 – 至今
+            </div>
+
+          </div>
+          <div class="exp-item">
+            <strong>
+              臺師大學生事務會議｜學生代表
+            </strong>
+
+            <div class="exp-date">
+              2026.08 – 至今
+            </div>
+
+
+          </div>
+          <div class="exp-item">
+            <strong>
+              臺師大校園景觀規畫小組｜學生代表
+            </strong>
+
+            <div class="exp-date">
+              2026.08 – 至今
+            </div>
+
+          </div>
+          <div class="exp-item">
+            <strong>
+              臺師大科技系116級畢業專展｜總務組長
+            </strong>
+
+            <div class="exp-date">
+              2026.02 – 至今
+            </div>
+          </div>
+
+         <div class="exp-item">
+
+            <strong>
+              臺師大師資生聯會｜會長
+            </strong>
+
+            <div class="exp-date">
+              2025.07 – 2026.07
+            </div>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              臺師大師資生聯會｜副會長
+            </strong>
+
+            <div class="exp-date">
+              2024.08 – 2025.07
+            </div>
+
+          </div>
+          <div class="exp-item">
+
+            <strong>
+              臺師大臺中南投文化週｜總籌
+            </strong>
+
+            <div class="exp-date">
+              2024.09 – 2025.05
+            </div>
+
+
+
+          </div>
+
+
+          <div class="exp-item">
+            <strong>
+              臺師大臺中南投同鄉校友會｜學術股長
+            </strong>
+
+            <div class="exp-date">
+              2024.08 – 2025.07
+            </div>
+
+          </div>
+
+          <div class="exp-item">
+
+            <strong>
+              臺師大中友會中友之夜｜扯鈴股長
+            </strong>
+
+            <div class="exp-date">
+              2024.02 – 2024.05
+            </div>
+
+          </div>
+
+          <div class="exp-item">
+
+            <strong>
+              臺師大臺中南投同鄉校友會幹部訓練｜生活機動股長
+            </strong>
+
+            <div class="exp-date">
+              2025.06 – 2025.08
+            </div>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              臺師大臺中南投文化週｜薔薇股員
+            </strong>
+
+            <div class="exp-date">
+              2023.09 – 2024.05
+            </div>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              臺師大科技系新生宿營｜隊輔
+            </strong>
+
+            <div class="exp-date">
+              2024.07 – 2024.09
+            </div>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              臺師大科技系學會｜總務部員
+            </strong>
+
+            <div class="exp-date">
+              2024.08 – 2025.07
+            </div>
+          </div>
+          <div class="exp-item">
+
+            <strong>
+              臺師大科技系｜學生代表
+            </strong>
+
+            <div class="exp-date">
+              2023.09 – 2023.12
+            </div>
+
+          </div>
+
+          <div class="exp-item">
+            <strong>
+              臺師大科技系學會｜代表
+            </strong>
+            <div class="exp-date">
+              2024.02 – 2024.6
+            </div>
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              國立中科實驗高級中學 Uni志工康輔社｜社長
+            </strong>
+
+            <div class="exp-date">
+              2021.08 – 2022.06
+            </div>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              陽明國小｜自治市長
+            </strong>
+
+            <div class="exp-date">
+              2015.08 – 2016.07
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- 教學經歷 -->
+
+      <div class="col-lg-6 order-lg-2">
+
+        <div class="exp-card">
+
+          <div class="exp-icon">
+            <i class="bi bi-mortarboard"></i>
+          </div>
+
+
+          <h3>
+            教學經歷
+          </h3>
+
+
+          <div class="exp-item">
+
+            <strong>
+              國立臺灣師範大學 教學媒體與應用(教)｜教學助理
+            </strong>
+
+            <div class="exp-date">
+              2026.9 – 至今
+            </div> 
+
+
+          </div>
+          <div class="exp-item">
+            <strong>
+              國立臺灣師範大學 職業教育訓練暨生涯規劃(教)｜教學助理
+            </strong>
+
+            <div class="exp-date">
+              2026.9 – 至今
+            </div> 
+  
+          </div>  
+          <div class="exp-item">
+            <strong>
+              國立臺灣師範大學 體育(扯鈴)｜教學助理
+            </strong>
+
+            <div class="exp-date">
+              2026.9 – 至今
+            </div> 
+          </div> 
+            <div class="exp-item">
+            <strong>
+              臺北市文昌國小扯鈴社｜教練
+            </strong>
+            <div class="exp-date">
+              2024.09 – 至今
+            </div>
+          </div>
+          <div class="exp-item">
+            <strong>
+              新北市秀朗國小扯鈴社｜教練
+            </strong>
+            <div class="exp-date">
+              2026.10 – 至今
+            </div>
+          </div>
+          <div class="exp-item">
+            <strong>
+              國立臺灣師範大學 國音及說話(小教)｜教學助理
+            </strong>
+
+            <div class="exp-date">
+              2026.2 – 2026.6
+            </div> 
+           
+           </div>  
+          <div class="exp-item">
+            <strong>
+              國立臺灣師範大學史懷哲精神服務隊｜班導｜體育｜話劇老師
+            </strong>
+
+          <p class="exp-date">
+            2026.02 – 2026.8
+          </p>
+          </div>
+         <div class="exp-item">
+            <strong>
+              臺北市民權國小扯鈴社｜實習教練
+            </strong>
+            <div class="exp-date">
+              2024.02 – 2024.06
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <strong>
+              臺北市古亭國小扯鈴社｜助理教練
+            </strong>
+            <div class="exp-date">
+              2024.02 – 2024.06
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <strong>
+              臺北市立人國小扯鈴社｜教練
+            </strong>
+            <div class="exp-date">
+              2024.04 – 2024.06
+            </div>
+          </div>
+
+          <div class="exp-item">  
+            <strong>
+              新北市安坑國小 STEAM晨光時間｜助教
+            </strong>
+
+            <div class="exp-date">
+              2024.11 – 2024.12
+            </div>
+
+          </div>
+          
+
+
+          <div class="exp-item">
+
+            <strong>
+              新北市安坑國小 STEAM晨光時間｜指導老師
+            </strong>
+
+            <div class="exp-date">
+              2025.03 – 2025.06
+            </div>
+
+          </div>
+          <div class="exp-item">
+
+            <strong>
+              臺北市古亭國小｜教學實習生
+            </strong>
+
+            <div class="exp-date">
+              2025.12
+            </div>
+
+          </div>
+
+          <div class="exp-item">
+
+            <strong>
+              花蓮縣東里國中｜偏鄉數學實習教師
+            </strong>
+
+            <div class="exp-date">
+              2025.07
+            </div>
+
+          </div>
+
+          <div class="exp-item">
+
+            <strong>
+              花蓮縣東里國中｜遠距數學實習教師
+            </strong>
+
+            <div class="exp-date">
+              2025.09 – 2026.06
+            </div>
+          </div>
+
+          <div class="exp-item">
+
+            <strong>
+              教育部數位學伴計畫｜大學伴
+            </strong>
+
+            <div class="exp-date">
+              2025.03 – 2026.01
+            </div>
+
+          </div>
+
+          <div class="exp-item">
+
+            <strong>
+              臺北市古亭國小｜晨光元氣輔導志工
+            </strong>
+
+            <div class="exp-date">
+              2025.09 – 2026.06
+            </div>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              韓國京仁教育大學附設小學｜臺灣文化課程教學
+            </strong>
+
+            <div class="exp-date">
+              2026.03.31
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- 營隊經歷 -->
+
+      <div class="col-lg-6 order-lg-4">
+
+        <div class="exp-card">
+
+          <div class="exp-icon">
+            <i class="bi bi-backpack"></i>
+          </div>
+
+
+          <h3>
+            營隊與教育服務
+          </h3>
+
+
+          <div class="exp-item">
+
+            <strong>
+              2024 臺師大中友會返鄉服務隊
+            </strong>
+
+            <p class="mb-1">
+              活動股員｜臺中市后里區泰安國小
+            </p>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              2025 臺師大中友會返鄉服務隊
+            </strong>
+
+            <p class="mb-1">
+              機動股長｜臺中市后里區泰安國小
+            </p>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              2026 臺師大中友會返鄉服務隊
+            </strong>
+
+            <p class="mb-1">
+              機動股長｜臺中市清水區吳厝國小
+            </p>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              2025 PASSION 三週暑期實習
+            </strong>
+
+            <p class="mb-1">
+              數學老師｜花蓮縣東里國中
+            </p>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              2026 認識臺灣夏令營
+            </strong>
+
+            <p class="mb-1">
+              隊輔、扯鈴老師｜廣東省東莞台商學校
+            </p>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <strong>
+              2026 國立臺灣師範大學史懷哲精神服務隊
+            </strong>
+
+            <p class="mb-1">
+              課程組長、班導、體育老師、話劇老師｜新北市深坑國小
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- 講師 -->
+
+      <div class="col-lg-6 order-lg-4">
+
+        <div class="exp-card">
+
+          <div class="exp-icon">
+            <i class="bi bi-mic"></i>
+          </div>
+
+
+          <h3>
+            講師與其他經歷
+          </h3>
+
+
+    <div class="exp-item">
+      <strong>
+        2026 國際師資培育研討會 小教專場｜講師
+      </strong>
+    </div>
+
+    <div class="exp-item">
+      <strong>
+        2024 中華民國工業科技教育學會「我們正步入一個前所未有的科技教育時代」研討會｜講師
+      </strong>
+    </div>
+
+    <div class="exp-item">
+      <strong>
+        2025 臺師大臺中南投同鄉校友會扯鈴例會｜講師
+      </strong>
+    </div>
+
+    <div class="exp-item">
+      <strong>
+        2025 臺師大臺中南投同鄉校友會板書例會｜講師
+      </strong>
+    </div>
+
+    <div class="exp-item">
+      <strong>
+        2026 臺師大社團負責人研習營經驗傳承與實例分享｜講師
+      </strong>
+    </div>
+
+    <div class="exp-item">
+      <strong>
+        2026 臺師大臺中南投同鄉校友會板書例會｜講師
+      </strong>
+    </div>
+
+    <div class="exp-item">
+      <strong>
+        2025 臺師大臺中南投同鄉校友會幹部訓練團體動力培訓｜講師
+      </strong>
+    </div>
+
+    <div class="exp-item">
+      <strong>
+        2026 臺師大中友會返鄉服務隊返服培訓營團體動力培訓｜講師
+      </strong>
+ </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================
+AWARDS
+====================================== -->
+
+<section id="awards" class="soft">
+
+  <div class="container">
+
+    <div class="label">
+      HONORS & CERTIFICATIONS
+    </div>
+
+
+    <h2 class="section-title">
+      獲獎與專業認證
+    </h2>
+
+
+    <h3 class="mt-5 mb-4">
+      獲獎經歷
+    </h3>
+
+
+    <div class="row g-3">
+
+
+      <div class="col-lg-6">
+        <div class="award-item">
+          🏆 114-1 臺師大師資生教學實務能力檢測教案｜第一名
+        </div>
+      </div>
+
+
+      <div class="col-lg-6">
+        <div class="award-item">
+          🏆 114-2 臺師大師資生教學實務能力檢測教學演示｜佳作
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-6">
+        <div class="award-item">
+          💻 臺師大程式設計通識課程｜專題佳作
+        </div>
+      </div>
+
+
+      <div class="col-lg-6">
+        <div class="award-item">
+          ⭐ 114-2 STAR 星辰獎學金
+        </div>
+      </div>
+
+
+      <div class="col-lg-6">
+        <div class="award-item">
+          🏆 臺師大115-1書卷獎
+        </div>
+      </div>
+
+
+      <div class="col-lg-6">
+        <div class="award-item">
+          🥇 教育部體育署113學年度全國各級學校民俗體育競賽<br>
+          大專男子組繞腳競速賽｜特優
+        </div>
+      </div>
+
+
+      <div class="col-lg-6">
+        <div class="award-item">
+          🥈 教育部體育署113學年度全國各級學校民俗體育競賽<br>
+          大專男子組雙鈴單項賽｜優等
+        </div>
+      </div>
+
+
+      <div class="col-lg-4">
+        <div class="award-item">
+          臺中市109學年度模範生
+        </div>
+      </div>
+
+
+      <div class="col-lg-4">
+        <div class="award-item">
+          臺中市110學年度模範生
+        </div>
+      </div>
+
+
+      <div class="col-lg-4">
+        <div class="award-item">
+          臺中市111學年度模範生
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <h3 class="mt-5 mb-4">
+      證照與認證
+    </h3>
+
+
+    <div class="row g-3">
+
+      <div class="col-md-6">
+        <div class="award-item">
+          <i class="bi bi-patch-check me-2"></i>
+          114-2 臺師大師資生教學實務能力檢測自然教案｜通過
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="award-item">
+          <i class="bi bi-patch-check me-2"></i>
+          114-2 臺師大師資生教學實務能力檢測板書｜通過
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+
+        <div class="award-item">
+
+          <i class="bi bi-patch-check me-2"></i>
+
+          師資生教學實務能力檢測
+          「教學檔案暨課程方針設計」通過
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-6">
+
+        <div class="award-item">
+
+          <i class="bi bi-patch-check me-2"></i>
+
+          師資生教學實務能力檢測
+          「國小試教能力」通過
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-6">
+
+        <div class="award-item">
+
+          <i class="bi bi-book me-2"></i>
+
+          非現職教師學習扶助師資
+          20小時知能研習認證合格
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-6">
+
+        <div class="award-item">
+
+          <i class="bi bi-translate me-2"></i>
+
+          多益840
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-6">
+
+        <div class="award-item">
+
+          <i class="bi bi-heart-pulse me-2"></i>
+
+          EMT-1 初級救護技術員證書
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-6">
+
+        <div class="award-item">
+
+          <i class="bi bi-award me-2"></i>
+
+          中華民國民俗體育運動協會
+          丙級教練證
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-6">
+
+        <div class="award-item">
+
+          <i class="bi bi-people me-2"></i>
+
+          臺師大社團負責人研習營結業
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-6">
+
+        <div class="award-item">
+
+          <i class="bi bi-stopwatch me-2"></i>
+
+          2026 國家地理馬拉松
+          半馬組 02:00:28
+
+        </div>
+
+      </div>
+            <div class="col-md-6">
+
+        <div class="award-item">
+
+          <i class="bi bi-stopwatch me-2"></i>
+
+          自行車一日北中196公里
+
+        </div>
+      </div>
+                  <div class="col-md-6">
+
+        <div class="award-item">
+
+          <i class="bi bi-stopwatch me-2"></i>
+
+          自行車環騎臺北99公里
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ======================================
+INTERNATIONAL
+====================================== -->
+
+<section id="international">
+
+  <div class="container">
+
+    <div class="label">
+      INTERNATIONAL EXPERIENCE
+    </div>
+
+
+    <h2 class="section-title">
+      教育見習
+    </h2>
+
+
+    <div class="row g-4 mt-3">
+
+
+      <div class="col-12 col-md-4">
+
+        <div class="international-card">
+
+          <div class="country">
+            🇯🇵
+          </div>
+
+          <h3 class="mt-3">
+            <strong>日本</strong>
+          </h3>
+
+          <h5>
+            九州大學
+          </h5>
+
+          <p class="text-secondary">
+            113-1 日本九州大學機械手臂國際交流，
+            進行科技學習、英語學術交流與成果發表。
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-12 col-md-4">
+
+        <div class="international-card">
+
+          <div class="country">
+            🇰🇷
+          </div>
+
+          <h3 class="mt-3">
+            <strong>韓國</strong>
+          </h3>
+
+          <h5>
+            首爾大學・京仁教育大學
+          </h5>
+
+          <p class="text-secondary">
+            114-2 韓國教育見習，
+            並於京仁教育大學附設小學進行臺灣文化課程教學。
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-12 col-md-4">
+
+        <div class="international-card">
+
+          <div class="country">
+            🇨🇳
+          </div>
+
+          <h3 class="mt-3">
+            <strong>中國大陸</strong>
+          </h3>
+
+          <h5>
+            東莞台商學校
+          </h5>
+
+          <p class="text-secondary">
+            114-3 東莞台商學校教育見習，
+            並於認識臺灣夏令營擔任隊輔與扯鈴老師，
+            傳授台灣文化。
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+</div>
+
+  <!-- ======================================
+EDUCATION JOURNAL
+====================================== -->
+
+<section id="journal">
+
+  <div class="container">
+
+<div class="label">
+  JOURNAL
+</div>
+
+<h2 class="section-title">
+  札記
+</h2>
+
+<p class="section-description mb-5">
+  記錄學習、生活、服務與一路走來的故事。
+</p>
+
+
+<div class="row g-4">
+
+  <!-- 第一篇：返服26 -->
+  <div class="col-lg-6">
+
+    <a href="journal-fanfu26.html" class="journal-card">
+
+      <div class="journal-image">
+        <img
+          src="https://drive.google.com/thumbnail?id=1SXXkCyqAHe1kY_QOXilOtSR-xMgtYa1S&sz=w1200"
+          alt="返服26">
+      </div>
+
+      <div class="journal-content">
+
+        <div class="journal-date">
+          2024.01.28－01.30
+        </div>
+
+        <h3>
+          返服26｜從這裡開始，我走向了教育
+        </h3>
+
+        <p>
+          大一參與中友返服，是我決定走向國小教育與偏鄉教育的起點。
+        </p>
+
+        <div class="journal-more">
+          閱讀全文 →
+        </div>
+
+      </div>
+
+    </a>
+
+  </div>
+
+
+<!-- 第二篇：返服27×28 -->
+<div class="col-lg-6">
+
+  <a href="journal-fanfu2728.html" class="journal-card">
+
+    <div class="journal-image">
+      <img
+        src="https://drive.google.com/thumbnail?id=1mIviXnDNM84NYcyq05e0UNJn1ZjxaWCJ&sz=w1200"
+        alt="返服27×28">
+    </div>
+
+    <div class="journal-content">
+
+      <div class="journal-date">
+        2025－2026
+      </div>
+
+      <h3>
+        返服27×28｜說好的最後一次呢？
+      </h3>
+
+      <p>
+        原本只打算跑一次的返服，最後卻一路從活動股員、機動股長，跑到了第三年。
+      </p>
+
+      <div class="journal-more">
+        閱讀全文 →
+      </div>
+
+    </div>
+
+  </a>
+
+</div>
+
+
+<!-- 第三篇：PASSION 東里國中 -->
+<div class="col-lg-6">
+
+  <a href="journal-dongli2025.html" class="journal-card">
+
+    <div class="journal-image">
+      <img
+        src="https://drive.google.com/thumbnail?id=1gWso5xdwGOUZsP2uf-ug_oZLQeLgZ7_W&sz=w1200"
+        alt="PASSION 東里國中暑期實習">
+    </div>
+
+    <div class="journal-content">
+
+      <div class="journal-date">
+        2025.07.16－07.25
+      </div>
+
+      <h3>
+        走進偏鄉之後｜我在東里國中的第一堂課
+      </h3>
+
+      <p>
+        夢想成為偏鄉教師的我，大二時走進東里國中，也第一次真正理解「會數學」和「會教數學」是兩件不同的事。
+      </p>
+
+      <div class="journal-more">
+        閱讀全文 →
+      </div>
+
+    </div>
+
+  </a>
+
+</div>
+
+
+<!-- 第四篇：古亭國小教學實習 -->
+<div class="col-lg-6">
+
+  <a href="journal-guting2025.html" class="journal-card">
+
+    <div class="journal-image">
+      <img
+        src="https://drive.google.com/thumbnail?id=1yeTLz0nAuFHwXvW95gBY0tQ-h_jwjn8K&sz=w1200"
+        alt="古亭國小教學實習">
+    </div>
+
+    <div class="journal-content">
+
+      <div class="journal-date">
+        2025.12.22－2026.01.02
+      </div>
+
+      <h3>
+        第一次走進真實校園生活｜古亭國小教學實習
+      </h3>
+
+      <p>
+        兩週以前，我以為當老師最重要的是把課教好；兩週以後才發現，教學只是導師工作的一部分。
+      </p>
+
+      <div class="journal-more">
+        閱讀全文 →
+      </div>
+
+    </div>
+
+  </a>
+
+</div>
+<!-- 第五篇：韓國教育見習 -->
+<div class="col-lg-6">
+
+  <a href="journal-korea2026.html" class="journal-card">
+
+    <div class="journal-image">
+
+      <img
+        src="https://drive.google.com/thumbnail?id=1FApH1W20WS8aubKEWckV1GgNzleZfINn&sz=w1600"
+        alt="韓國教育見習">
+
+    </div>
+
+    <div class="journal-content">
+
+      <div class="journal-date">
+        2026.03.28－04.04
+      </div>
+
+      <h3>
+        一下當學者，一下當觀光客｜韓國教育見習
+      </h3>
+
+      <p>
+        第一次踏上韓國，從學校、課堂到城市文化，在參訪、教學與旅行之間，看見了許多不同的教育風景。
+      </p>
+
+      <div class="journal-more">
+        閱讀全文 →
+      </div>
+
+    </div>
+
+  </a>
+
+</div>
+
+<!-- 第六篇：東莞教育見習 -->
+<div class="col-lg-6">
+
+  <a href="journal-dongguan2026.html" class="journal-card">
+
+    <div class="journal-image">
+      <img
+        src="https://drive.google.com/thumbnail?id=1sStlP2VFdJ-1yHIxyCpVMUwRLm2NeAQS&sz=w1600"
+        alt="東莞教育見習">
+    </div>
+
+    <div class="journal-content">
+
+      <div class="journal-date">
+        2026.07.10－07.17
+      </div>
+
+      <h3>
+        失敗的經驗，也充滿感動｜東莞教育見習
+      </h3>
+
+      <p>
+        第一次擔任隊輔、第一次面對50多人扯鈴大班教學，也在挫折與成就感之間，重新認識了自己的班級經營。
+      </p>
+
+      <div class="journal-more">
+        閱讀全文 →
+      </div>
+
+    </div>
+
+  </a>
+
+</div>
+
+
+</div>
+<!-- ↑ 前六篇 row 結束 -->
+
+<div class="row g-4 mt-1">
+
+  <!-- 第七篇：深坑國小史懷哲 -->
+  <div class="col-lg-6">
+
+    <a href="journal-shenkeng2026.html" class="journal-card">
+
+      <div class="journal-image">
+        <img
+          src="https://drive.google.com/thumbnail?id=1bP84TiBHO8Jn0EAWGS-pmf_rxj1grsZI&sz=w1600"
+          alt="深坑國小史懷哲計畫">
+      </div>
+
+      <div class="journal-content">
+
+        <div class="journal-date">
+          2026.07.25－08.14
+        </div>
+
+        <h3>
+          剛下飛機，話劇危機｜深坑國小史懷哲計畫
+        </h3>
+
+        <p>
+          從課程組長、班導師、話劇老師、體育老師到總務，在一次次的第一次裡，和夥伴一起撐過三週史懷哲營期。
+        </p>
+
+        <div class="journal-more">
+          閱讀全文 →
+        </div>
+
+      </div>
+
+    </a>
+
+  </div>
+
+  <!-- 第八篇：2026國際師資培育研討會 -->
+  <div class="col-lg-6">
+
+    <a href="journal-itec2026.html" class="journal-card">
+
+      <div class="journal-image">
+        <img
+          src="https://drive.google.com/thumbnail?id=13wu9PxOCbi7cm9FoaqU8GRyDXEWo6ITQ&sz=w1600"
+          alt="2026國際師資培育研討會">
+      </div>
+
+      <div class="journal-content">
+
+        <div class="journal-date">
+          2026.09.18－09.19
+        </div>
+
+        <h3>
+          第二次研討會發表｜2026國際師資培育研討會
+        </h3>
+
+        <p>
+          從數位學伴的 SEL 教學實踐出發，把教學現場的觀察、課程設計與反思帶進國際研討會。
+        </p>
+
+        <div class="journal-more">
+          閱讀全文 →
+        </div>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</div>
+<!-- ↑ 第七、八篇 row 結束 -->
+
+</div>
+<!-- ↑ container 結束 -->
+
+</section>
+<!-- ======================================
+NEWS
+====================================== -->
+
+<section id="news">
+
+  <div class="container">
+
+    <div class="label">
+      EDUCATION NEWS
+    </div>
+
+    <h2 class="section-title">
+      教育新聞
+    </h2>
+
+    <p class="section-description mb-5">
+      記錄我為教育發聲的成果。
+    </p>
+
+
+    <div class="row g-4">
+
+
+      <!-- 新聞 1 -->
+      <div class="col-lg-6">
+
+        <a
+          class="news-card"
+          href="https://www.thenewslens.com/article/260440"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <div class="news-source">
+            THE NEWS LENS 關鍵評論網
+          </div>
+
+          <div class="news-title">
+            「缺醫師怎不找代理醫師？」教育部新政解教師荒，
+            師培生嘆：教育要變服務業了嗎？
+          </div>
+
+          <div class="news-more">
+            閱讀報導
+            <i class="bi bi-arrow-up-right ms-1"></i>
+          </div>
+
+        </a>
+
+      </div>
+
+
+      <!-- 新聞 2 -->
+      <div class="col-lg-6">
+
+        <a
+          class="news-card"
+          href="https://www.cna.com.tw/news/ahel/202509250102.aspx"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <div class="news-source">
+            中央通訊社 CNA
+          </div>
+
+          <div class="news-title">
+            教師節前夕師資生嘆濫訴、行政負擔　棄教程者增
+          </div>
+
+          <div class="news-more">
+            閱讀報導
+            <i class="bi bi-arrow-up-right ms-1"></i>
+          </div>
+
+        </a>
+
+      </div>
+
+
+      <!-- 新聞 3 -->
+      <div class="col-lg-6">
+
+        <a
+          class="news-card"
+          href="https://flipedu.parenting.com.tw/article/010786"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <div class="news-source">
+            翻轉教育
+          </div>
+
+          <div class="news-title">
+            台師大師培新制上路：128學分可完成師培，
+            未來孩子的老師會不一樣嗎？
+          </div>
+
+          <div class="news-more">
+            閱讀報導
+            <i class="bi bi-arrow-up-right ms-1"></i>
+          </div>
+
+        </a>
+
+      </div>
+
+
+        <!-- 新聞 4 -->
+      <div class="col-lg-6">
+
+        <a
+          class="news-card"
+          href="https://flipedu.parenting.com.tw/article/010775"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <div class="news-source">
+            翻轉教育
+          </div>
+
+          <div class="news-title">
+            逾三成師培生不想當老師！調查揭三大壓力：
+            薪資低、風險高、制度不穩
+          </div>
+
+          <div class="news-more">
+            閱讀報導
+            <i class="bi bi-arrow-up-right ms-1"></i>
+          </div>
+
+        </a>
+
+      </div>
+
+
+      <!-- 教育新聞 5 -->
+      <div class="col-lg-6">
+
+        <a
+          class="news-card"
+          href="https://www.ner.gov.tw/Program/Episode/26051611232580265/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <div class="news-source">
+            國立教育廣播電臺
+          </div>
+
+          <div class="news-title">
+            師培？失陪？師資生真實心聲
+          </div>
+
+          <div class="news-more">
+            閱讀報導
+            <i class="bi bi-arrow-up-right ms-1"></i>
+          </div>
+
+        </a>
+
+      </div>
+
+
+      <!-- 教育新聞 6 -->
+      <div class="col-lg-6">
+
+        <a
+          class="news-card"
+          href="https://www.parenting.com.tw/article/6002173"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <div class="news-source">
+            親子天下
+          </div>
+
+          <div class="news-title">
+            逾三成師培生不想當老師！調查揭三大壓力：薪資低、風險高、制度不穩
+          </div>
+
+          <div class="news-more">
+            閱讀報導
+            <i class="bi bi-arrow-up-right ms-1"></i>
+          </div>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  <!-- ======================================
+     師大新聞
+====================================== -->
+
+<div id="ntnu-news" class="mt-5 pt-4">
+
+  <div class="label">
+    NTNU NEWS
+  </div>
+
+  <h3 class="section-title" style="font-size:2.5rem;">
+    師大新聞
+  </h3>
+
+  <p class="section-description mb-4">
+    記錄我上師大新聞。
+  </p>
+
+</div>
+
+
+<div class="row g-4">
+
+
+  <!-- 師大新聞 1 -->
+  <div class="col-lg-6">
+
+    <a
+      class="news-card"
+      href="https://pr.ntnu.edu.tw/news/index.php?mode=data&id=24137"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <div class="news-source">
+        國立臺灣師範大學
+      </div>
+
+      <div class="news-title">
+        師培學院師資生教學實務能力檢測頒獎
+        專業先行培育未來教育中堅
+      </div>
+
+      <div class="news-more">
+        閱讀報導
+        <i class="bi bi-arrow-up-right ms-1"></i>
+      </div>
+
+    </a>
+
+  </div>
+
+
+  <!-- 師大新聞 2 -->
+   <div class="col-lg-6">
+
+  <a
+    class="news-card"
+    href="https://pr.ntnu.edu.tw/news/index.php?id=23711&mode=data"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    <div class="news-source">
+      國立臺灣師範大學
+    </div>
+
+    <div class="news-title">
+      臺師大PASSION暑期實習結合國際志工
+      開啟偏鄉教育學習新頁
+    </div>
+
+    <div class="news-more">
+      閱讀報導
+      <i class="bi bi-arrow-up-right ms-1"></i>
+    </div>
+
+  </a>
+
+</div>
+
+
+  <!-- 師大新聞 3 -->
+  <div class="col-lg-6">
+
+    <a
+      class="news-card"
+      href="https://pr.ntnu.edu.tw/ntnunews/index.php?mode=data&id=23110&type_id=74"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <div class="news-source">
+        國立臺灣師範大學
+      </div>
+
+      <div class="news-title">
+        工業科技教育學會113年會
+        聚焦科技教育未來趨勢
+      </div>
+
+      <div class="news-more">
+        閱讀報導
+        <i class="bi bi-arrow-up-right ms-1"></i>
+      </div>
+
+    </a>
+
+  </div>
+
+
+  <!-- 師大新聞 4 -->
+  <div class="col-lg-6">
+
+    <a
+      class="news-card"
+      href="https://pr.ntnu.edu.tw/news/index.php?mode=data&id=22998"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <div class="news-source">
+        國立臺灣師範大學
+      </div>
+
+      <div class="news-title">
+        科技系師生攜手高中生赴日本九州大學交流
+        融入Design Pitch的科技教育導向國際交流
+      </div>
+
+      <div class="news-more">
+        閱讀報導
+        <i class="bi bi-arrow-up-right ms-1"></i>
+      </div>
+
+    </a>
+
+  </div>
+
+
+ </div>
+</div>
+
+</section>
+<!-- ======================================
+VIDEOS
+====================================== -->
+
+<section id="videos" class="soft">
+
+  <div class="container">
+
+    <div class="label">
+      VIDEO COLLECTION
+    </div>
+
+    <h2 class="section-title">
+      影音專區
+    </h2>
+
+    <p class="section-description mb-5">
+      記錄教育服務、營隊實踐與成長歷程。
+    </p>
+
+    <div class="row g-4">
+
+      <!-- 影片 1：PASSION 暑期實習 -->
+      <div class="col-lg-6">
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YUFU81H-XZo"
+              title="113學年度 PASSION暑期 東里國中 回顧影片"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-category">
+              PASSION SUMMER INTERNSHIP
+            </div>
+            <h3>113學年度 PASSION暑期 東里國中 回顧影片</h3>
+            <p>PASSION偏鄉教育學分學程暑期實習｜東里國中服務與教學回顧。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 影片 2：史懷哲第一梯次 -->
+      <div class="col-lg-6">
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/vrsYGgscdc0"
+              title="臺師大第二屆小教史懷哲｜第一梯次回顧片"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-category">
+              EDUCATION SERVICE
+            </div>
+            <h3>臺師大第二屆小教史懷哲｜第一梯次回顧片</h3>
+            <p>國立臺灣師範大學第二屆小教史懷哲精神教育服務隊第一梯次服務回顧。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 影片 3：史懷哲第二梯次 -->
+      <div class="col-lg-6">
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/r8IQGSvazl0?start=86"
+              title="臺師大第二屆小教史懷哲｜第二梯次回顧片"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-category">
+              EDUCATION SERVICE
+            </div>
+            <h3>臺師大第二屆小教史懷哲｜第二梯次回顧片</h3>
+            <p>國立臺灣師範大學第二屆小教史懷哲精神教育服務隊第二梯次服務回顧。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================
+STICKER SHOP
+====================================== -->
+
+<section id="stickers" class="sticker-shop">
+  <div class="container">
+
+    <div class="label">
+      LINE STICKER SHOP
+    </div>
+
+    <h2 class="section-title">
+      貼圖小舖
+    </h2>
+
+    <p class="section-description sticker-shop-intro mb-5">
+      把「很好欸」變成日常對話的一部分。歡迎到 LINE 貼圖小舖看看「張笑長」系列貼圖。
+    </p>
+
+    <div class="row g-4">
+
+      <div class="col-lg-6">
+        <div class="sticker-card">
+          <div class="sticker-card-icon">
+            <i class="bi bi-chat-heart"></i>
+          </div>
+
+          <h3>很好欸～張笑長</h3>
+
+          <p>
+            「張笑長」第一彈 LINE 貼圖，收錄各種「很好欸」系列日常反應，
+            適合聊天、回覆與各種生活情境使用。
+          </p>
+
+          <a
+            class="sticker-shop-btn"
+            href="https://line.me/S/sticker/36737052/?lang=zh-Hant&utm_source=gnsh_stickerDetail"
+            target="_blank"
+            rel="noopener noreferrer">
+            前往 LINE 貼圖小舖
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="sticker-card">
+          <div class="sticker-card-icon">
+            <i class="bi bi-chat-heart-fill"></i>
+          </div>
+
+          <h3>很好欸～張笑長2.0</h3>
+
+          <p>
+            「張笑長」第二彈 LINE 貼圖，延續原本角色與「很好欸」主題，
+            加入更多表情與對話情境。
+          </p>
+
+          <a
+            class="sticker-shop-btn"
+            href="https://line.me/S/sticker/36826314/?lang=zh-Hant&utm_source=gnsh_stickerDetail"
+            target="_blank"
+            rel="noopener noreferrer">
+            前往 LINE 貼圖小舖
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================
+PHILOSOPHY
+====================================== -->
+
+<section id="philosophy" class="philosophy">
+
+  <div class="container">
+
+    <div class="label">
+      EDUCATIONAL PHILOSOPHY
+    </div>
+
+    <div class="student-heading">
+      <h2>語宸的 <span style="color:#f3cd7a;">STUDENT</span> 教育理念</h2>
+      <p>
+        我希望教育不只是傳遞知識，更是陪伴孩子探索自我、發現天賦、勇於實踐、持續發展，
+        最終在安全與尊重的環境中自信茁壯。<br>
+        因此，我以 <strong style="color:#f3cd7a;">STUDENT</strong> 作為自己的教育理念核心。
+      </p>
+    </div>
+
+    <div class="student-acronym">
+      <div class="student-pill"><span class="letter">S</span><span class="word">SEARCH</span></div>
+      <div class="student-pill"><span class="letter">T</span><span class="word">TALENT</span></div>
+      <div class="student-pill"><span class="letter">U</span><span class="word">USE</span></div>
+      <div class="student-pill"><span class="letter">D</span><span class="word">DEVELOPMENT</span></div>
+      <div class="student-pill"><span class="letter">E</span><span class="word">EMPOWERMENT</span></div>
+      <div class="student-pill"><span class="letter">N</span><span class="word">NURTURE</span></div>
+      <div class="student-pill"><span class="letter">T</span><span class="word">THRIVE</span></div>
+    </div>
+
+    <div class="row student-grid g-4">
+
+      <div class="col-md-6 col-xl-4">
+        <div class="student-card">
+          <div class="student-card-head">
+            <div class="student-card-letter">S</div>
+            <div class="student-card-title">
+              <small>SEARCH｜探索</small>
+              <h3>探索世界，找到方向</h3>
+            </div>
+          </div>
+          <p>引導學生主動探索世界，找到自己的興趣與方向。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="student-card">
+          <div class="student-card-head">
+            <div class="student-card-letter">T</div>
+            <div class="student-card-title">
+              <small>TALENT｜天賦</small>
+              <h3>看見優勢與潛能</h3>
+            </div>
+          </div>
+          <p>看見每個孩子不同的優勢與潛能，讓天賦有被發現的機會。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="student-card">
+          <div class="student-card-head">
+            <div class="student-card-letter">U</div>
+            <div class="student-card-title">
+              <small>USE｜實踐</small>
+              <h3>讓所學真正用出來</h3>
+            </div>
+          </div>
+          <p>讓所學能實際運用，在做中學、在生活中學。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="student-card">
+          <div class="student-card-head">
+            <div class="student-card-letter">D</div>
+            <div class="student-card-title">
+              <small>DEVELOPMENT｜發展</small>
+              <h3>重視成長歷程</h3>
+            </div>
+          </div>
+          <p>重視每位學生的成長歷程，支持他們持續發展。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="student-card">
+          <div class="student-card-head">
+            <div class="student-card-letter">E</div>
+            <div class="student-card-title">
+              <small>EMPOWERMENT｜賦能</small>
+              <h3>給孩子選擇與嘗試</h3>
+            </div>
+          </div>
+          <p>給學生選擇、嘗試與犯錯的空間，培養自主學習的能力。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="student-card">
+          <div class="student-card-head">
+            <div class="student-card-letter">N</div>
+            <div class="student-card-title">
+              <small>NURTURE｜培育</small>
+              <h3>用陪伴建立自信</h3>
+            </div>
+          </div>
+          <p>營造安全、尊重且沒有壓迫感的學習環境，陪伴學生建立自信。</p>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="student-card thrive-card">
+          <div class="student-card-head">
+            <div class="student-card-letter">T</div>
+            <div class="student-card-title">
+              <small>THRIVE｜茁壯</small>
+              <h3>走向適合自己的道路</h3>
+            </div>
+          </div>
+          <p>教育的最終目的，是讓每個孩子找到適合自己的道路，持續成長並發揮價值。</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="student-process">
+      <div class="student-process-title">
+        <h3>STUDENT 的成長脈絡</h3>
+        <p>從探索開始，一步一步走向茁壯。</p>
+      </div>
+
+      <div class="student-process-flow">
+        <div class="process-step">
+          <div class="process-letter">S</div>
+          <strong>探索</strong>
+          <span>SEARCH</span>
+        </div>
+
+        <div class="process-arrow">→</div>
+
+        <div class="process-step">
+          <div class="process-letter">T</div>
+          <strong>發現天賦</strong>
+          <span>TALENT</span>
+        </div>
+
+        <div class="process-arrow">→</div>
+
+        <div class="process-step">
+          <div class="process-letter">U</div>
+          <strong>實際運用</strong>
+          <span>USE</span>
+        </div>
+
+        <div class="process-arrow">→</div>
+
+        <div class="process-step">
+          <div class="process-letter">D</div>
+          <strong>持續發展</strong>
+          <span>DEVELOPMENT</span>
+        </div>
+
+        <div class="process-arrow">→</div>
+
+        <div class="process-step">
+          <div class="process-letter">E</div>
+          <strong>獲得自主能力</strong>
+          <span>EMPOWERMENT</span>
+        </div>
+
+        <div class="process-arrow">→</div>
+
+        <div class="process-step">
+          <div class="process-letter">N</div>
+          <strong>陪伴培育</strong>
+          <span>NURTURE</span>
+        </div>
+
+        <div class="process-arrow">→</div>
+
+        <div class="process-step">
+          <div class="process-letter">T</div>
+          <strong>最終茁壯</strong>
+          <span>THRIVE</span>
+        </div>
+      </div>
+
+      <div class="student-process-caption">
+        探索 Search → 發現天賦 Talent → 實際運用 Use → 持續發展 Development →
+        獲得自主能力 Empowerment → 陪伴培育 Nurture → 最終茁壯 Thrive。
+      </div>
+    </div>
+
+    <div class="student-summary">
+      <h4>我相信</h4>
+      <p>
+        每個孩子都值得被理解，也都擁有屬於自己的節奏與光芒。
+        教師不只是知識的傳遞者，更是陪伴孩子探索、發掘、實踐、成長與茁壯的重要引路人。
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================
+FOOTER
+====================================== -->
+
+<footer>
+
+  <strong>
+    張語宸 JHANG,YU-CHEN
+  </strong>
+
+  <div class="mt-2">
+    Education · International · Leadership
+  </div>
+
+  <div class="mt-3 small">
+    © 2026 JHANG,YU-CHEN. All Rights Reserved.
+  </div>
+
+</footer>
+
+</main>
+
+
+
+<!-- ======================================
+Bootstrap JS
+====================================== -->
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- ======================================
+同頁導覽功能
+====================================== -->
+
+ <script>
+function toggleProfileDetails() {
+  const details = document.getElementById('profileDetails');
+  const button = document.getElementById('profileToggleBtn');
+  const text = document.getElementById('profileToggleText');
+
+  if (!details || !button || !text) return;
+
+  const isOpen = details.classList.toggle('show');
+
+  text.textContent = isOpen
+    ? '收起完整個人經歷'
+    : '查看完整個人經歷';
+
+  button.classList.toggle('open', isOpen);
+
+  if (!isOpen) {
+    button.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
+}
+
+function goToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  const details = document.getElementById('profileDetails');
+
+  if (!section) return;
+
+  // 點擊隱藏區塊的捷徑時，自動展開
+  if (
+    details &&
+    details.contains(section) &&
+    !details.classList.contains('show')
+  ) {
+    details.classList.add('show');
+
+    const button = document.getElementById('profileToggleBtn');
+    const text = document.getElementById('profileToggleText');
+
+    if (button) button.classList.add('open');
+    if (text) text.textContent = '收起完整個人經歷';
+  }
+
+  // 展開後移動到指定位置
+  setTimeout(function () {
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }, 100);
+}
+
+
+
+function setActiveSideLink(sectionId) {
+
+  document
+    .querySelectorAll('[data-section]')
+    .forEach(function(link) {
+
+      link.classList.toggle(
+        'active',
+        link.getAttribute('data-section')
+          === sectionId
+      );
+
+    });
+
+}
+
+document.addEventListener(
+  'DOMContentLoaded',
+  function() {
+
+    const trackedIds = [
+      'home',
+      'about',
+      'education',
+      'experience',
+      'awards',
+      'international',
+      'journal',
+      'news',
+      'ntnu-news',
+      'videos',
+      'stickers',
+      'philosophy'
+    ];
+
+    const sections =
+      trackedIds
+        .map(function(id) {
+          return document.getElementById(id);
+        })
+        .filter(Boolean);
+
+    const observer =
+      new IntersectionObserver(
+        function(entries) {
+
+          const visible =
+            entries
+              .filter(function(entry) {
+                return entry.isIntersecting;
+              })
+              .sort(function(a, b) {
+                return (
+                  b.intersectionRatio -
+                  a.intersectionRatio
+                );
+              });
+
+          if (visible.length > 0) {
+            setActiveSideLink(
+              visible[0].target.id
+            );
+          }
+
+        },
+        {
+          rootMargin:
+            '-18% 0px -62% 0px',
+
+          threshold:
+            [0.01, 0.15, 0.35]
+        }
+      );
+
+    sections.forEach(function(section) {
+      observer.observe(section);
+    });
+
+  }
+);
+
+
+
+/* ========================================
+   手機版側欄收合
+======================================== */
+(function () {
+  const closeBtn = document.getElementById('mobileSidebarToggle');
+  const reopenBtn = document.getElementById('mobileSidebarReopen');
+
+  if (!closeBtn || !reopenBtn) return;
+
+  const isMobileSidebarMode = function () {
+    return window.matchMedia('(pointer: coarse) and (max-width: 1200px)').matches;
+  };
+
+  const setCollapsed = function (collapsed) {
+    document.body.classList.toggle('mobile-sidebar-collapsed', collapsed);
+
+    closeBtn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    reopenBtn.setAttribute('aria-expanded', collapsed ? 'true' : 'false');
+  };
+
+  const syncSidebarMode = function () {
+    if (isMobileSidebarMode()) {
+      if (!document.body.dataset.mobileSidebarInitialized) {
+        setCollapsed(true);
+        document.body.dataset.mobileSidebarInitialized = '1';
+      }
+    } else {
+      document.body.classList.remove('mobile-sidebar-collapsed');
+      delete document.body.dataset.mobileSidebarInitialized;
+      closeBtn.setAttribute('aria-expanded', 'true');
+      reopenBtn.setAttribute('aria-expanded', 'false');
+    }
+  };
+
+  closeBtn.addEventListener('click', function (event) {
+    event.stopPropagation();
+
+    if (!isMobileSidebarMode()) return;
+
+    setCollapsed(true);
+  });
+
+  reopenBtn.addEventListener('click', function () {
+    if (!isMobileSidebarMode()) return;
+
+    setCollapsed(false);
+  });
+
+  /* 點手機側欄選單後自動收起 */
+  document.querySelectorAll('.side-link, .side-sub-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (isMobileSidebarMode()) {
+        setTimeout(function () {
+          setCollapsed(true);
+        }, 180);
+      }
+    });
+  });
+
+  window.addEventListener('resize', syncSidebarMode);
+  syncSidebarMode();
+})();
+
+
+/* ========================================
+   電腦版側欄收合
+======================================== */
+(function () {
+  const closeBtn = document.getElementById('desktopSidebarToggle');
+  const reopenBtn = document.getElementById('desktopSidebarReopen');
+
+  if (!closeBtn || !reopenBtn) return;
+
+  const isDesktopMode = function () {
+    return window.matchMedia('(min-width: 992px)').matches;
+  };
+
+  const setDesktopCollapsed = function (collapsed) {
+    document.body.classList.toggle(
+      'desktop-sidebar-collapsed',
+      collapsed
+    );
+
+    closeBtn.setAttribute(
+      'aria-expanded',
+      collapsed ? 'false' : 'true'
+    );
+
+    reopenBtn.setAttribute(
+      'aria-expanded',
+      collapsed ? 'true' : 'false'
+    );
+  };
+
+  closeBtn.addEventListener('click', function (event) {
+    event.stopPropagation();
+
+    if (!isDesktopMode()) return;
+
+    setDesktopCollapsed(true);
+  });
+
+  reopenBtn.addEventListener('click', function () {
+    if (!isDesktopMode()) return;
+
+    setDesktopCollapsed(false);
+  });
+
+  window.addEventListener('resize', function () {
+    if (!isDesktopMode()) {
+      document.body.classList.remove(
+        'desktop-sidebar-collapsed'
+      );
+
+      closeBtn.setAttribute('aria-expanded', 'true');
+      reopenBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+
+</script>
+
+
+<script src="tidy.js"></script>
+</body>
+
+</html>

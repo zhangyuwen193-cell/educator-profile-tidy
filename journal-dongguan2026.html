@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="2026 東莞教育見習｜認識台灣夏令營｜張語宸教育札記">
+
+  <title>東莞教育見習｜張語宸札記</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
+    rel="stylesheet">
+
+<style>
+
+:root {
+  --navy:#1f3553;
+  --gold:#b79a5b;
+  --soft:#f7f5ef;
+  --text:#29384b;
+  --muted:#6f7a88;
+  --line:#e8e3d8;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+
+
+/* ================================
+   TOP BAR
+================================ */
+
+.topbar {
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid var(--line);
+  padding:18px 30px;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.topbar-inner {
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand {
+  text-decoration:none;
+  color:var(--navy);
+  font-weight:900;
+  font-size:1.1rem;
+}
+
+.brand-circle {
+  display:inline-flex;
+  width:40px;
+  height:40px;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:var(--navy);
+  color:#fff;
+  margin-right:8px;
+}
+
+.back-link {
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:700;
+}
+
+.back-link:hover {
+  color:var(--gold);
+}
+
+
+/* ================================
+   ARTICLE HEADER
+================================ */
+
+.article-header {
+  padding:90px 20px 55px;
+  text-align:center;
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(183,154,91,.16),
+      transparent 32%
+    ),
+    #fff;
+}
+
+.article-category {
+  color:var(--gold);
+  font-size:.85rem;
+  font-weight:800;
+  letter-spacing:4px;
+  margin-bottom:18px;
+}
+
+.article-date {
+  color:var(--gold);
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:18px;
+}
+
+.article-title {
+  max-width:1000px;
+  margin:0 auto;
+  font-family:"LXGW WenKai TC","DFKai-SB",serif;
+  color:var(--navy);
+  font-weight:700;
+  font-size:clamp(2.4rem,5vw,4.5rem);
+  line-height:1.4;
+}
+
+.article-subtitle {
+  max-width:800px;
+  margin:25px auto 0;
+  color:var(--muted);
+  font-size:1.15rem;
+  line-height:2;
+}
+
+
+/* ================================
+   HERO IMAGE
+================================ */
+
+.hero-image {
+  max-width:1200px;
+  margin:0 auto 70px;
+  padding:0 20px;
+}
+
+.hero-image img {
+  display:block;
+  width:100%;
+  max-height:720px;
+  object-fit:cover;
+  border-radius:28px;
+  box-shadow:0 25px 60px rgba(31,53,83,.15);
+}
+
+
+/* ================================
+   ARTICLE
+================================ */
+
+.article-container {
+  max-width:900px;
+  margin:auto;
+  padding:0 25px 100px;
+}
+
+.article-container p {
+  font-size:1.15rem;
+  line-height:2.15;
+  margin-bottom:30px;
+  color:#344357;
+}
+
+
+/* ================================
+   SECTION TITLE
+================================ */
+
+.article-section {
+  margin:75px 0 30px;
+}
+
+.article-section-label {
+  color:var(--gold);
+  font-size:.8rem;
+  font-weight:800;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
+
+.article-section h2 {
+  font-family:"LXGW WenKai TC","DFKai-SB",serif;
+  color:var(--navy);
+  font-size:2.2rem;
+  font-weight:700;
+}
+
+
+/* ================================
+   QUOTE
+================================ */
+
+.article-quote {
+  margin:55px 0;
+  padding:30px 35px;
+  border-left:4px solid var(--gold);
+  background:var(--soft);
+  color:var(--navy);
+  font-family:"LXGW WenKai TC","DFKai-SB",serif;
+  font-size:1.65rem;
+  font-weight:700;
+  line-height:1.8;
+}
+
+
+/* ================================
+   PHOTOS
+================================ */
+
+.article-photo {
+  margin:50px 0;
+}
+
+.article-photo img {
+  width:100%;
+  max-height:680px;
+  object-fit:cover;
+  border-radius:20px;
+  display:block;
+}
+
+.photo-caption {
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+  margin-top:12px;
+}
+
+
+/* 雙照片 */
+
+.photo-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin:50px 0;
+}
+
+.photo-grid img {
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+
+/* 三照片 */
+
+.photo-grid-three {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin:50px 0;
+}
+
+.photo-grid-three img {
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+
+/* ================================
+   ENDING
+================================ */
+
+.article-ending {
+  margin-top:80px;
+  padding:45px;
+  background:var(--soft);
+  border-radius:25px;
+}
+
+.article-ending p:last-child {
+  margin-bottom:0;
+}
+
+.back-bottom {
+  text-align:center;
+  margin-top:70px;
+}
+
+.back-button {
+  display:inline-block;
+  padding:15px 30px;
+  border:1px solid var(--gold);
+  border-radius:999px;
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:800;
+  transition:.3s;
+}
+
+.back-button:hover {
+  background:var(--navy);
+  color:white;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  background:#16283f;
+  color:#aeb9c5;
+  padding:40px 20px;
+  text-align:center;
+}
+
+footer strong {
+  color:white;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width:767px) {
+
+  .article-header {
+    padding:65px 20px 40px;
+  }
+
+  .article-title {
+    font-size:2.5rem;
+  }
+
+  .article-container {
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .article-container p {
+    font-size:1.05rem;
+    line-height:2;
+  }
+
+  .article-quote {
+    font-size:1.4rem;
+    padding:25px;
+  }
+
+  .photo-grid,
+  .photo-grid-three {
+    grid-template-columns:1fr;
+  }
+
+  .photo-grid img,
+  .photo-grid-three img {
+    height:auto;
+  }
+
+  .topbar {
+    padding:12px 15px;
+  }
+
+  .brand {
+    font-size:.9rem;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     NAV
+================================= -->
+
+<div class="topbar">
+
+  <div class="topbar-inner">
+
+    <a href="index.html" class="brand">
+      <span class="brand-circle">張</span>
+      張語宸
+    </a>
+
+    <a href="index.html#journal" class="back-link">
+      <i class="bi bi-arrow-left"></i>
+      返回札記
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header class="article-header">
+
+  <div class="article-category">
+    EDUCATION JOURNAL
+  </div>
+
+  <div class="article-date">
+    2026.07.10－07.17
+  </div>
+
+  <h1 class="article-title">
+    失敗的經驗，也充滿感動｜東莞教育見習
+  </h1>
+
+  <p class="article-subtitle">
+    東莞教育見習・認識台灣夏令營<br>
+    第九小隊隊輔 × 台灣民俗體育扯鈴授課
+  </p>
+
+</header>
+
+
+<!-- =================================
+     HERO PHOTO
+================================= -->
+
+<div class="hero-image">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1sStlP2VFdJ-1yHIxyCpVMUwRLm2NeAQS&sz=w1600"
+    alt="東莞教育見習">
+
+</div>
+
+
+<!-- =================================
+     ARTICLE
+================================= -->
+
+<main class="article-container">
+
+
+<p>
+這次到東莞台商學校，陪伴台商子女認識台灣。我擔任第九小隊隊輔，同時也是台灣民俗體育—扯鈴的授課老師。
+</p>
+
+
+<div class="article-section">
+
+  <div class="article-section-label">
+    TEAM LEADER
+  </div>
+
+  <h2>
+    第一次擔任隊輔
+  </h2>
+
+</div>
+
+
+<p>
+這是我第一次擔任隊輔，和過去單純站在台上教課的經驗非常不一樣。我們小隊共有11位學生，等於1位隊輔要帶11個孩子。相較於以前返服時2位小隊輔帶8位學生，師生比真的差非常多，實際帶起來也比想像中更加吃力。
+</p>
+
+<p>
+再加上彼此成長背景、文化與日常用詞的不同，以及孩子們之間的競爭意識比我過去接觸的學生更強烈，很多在我們眼中看似微不足道的小事，都可能瞬間變成一場爭執。每天都會出現新的狀況，也讓這次的隊輔工作充滿挑戰。
+</p>
+
+
+<div class="photo-grid">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1aiLokd6opJTXFwvh8r2kzeL4seQVwuth&sz=w1200"
+    alt="東莞教育見習">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=12ooPs5JT9r2D_gioz8E_UG-kgwsAfYkj&sz=w1200"
+    alt="東莞教育見習">
+
+</div>
+
+
+<div class="article-quote">
+  「從嚴到寬」的重要性。
+</div>
+
+
+<p>
+一開始對孩子太好、界線沒有建立清楚，等到後來想要嚴格時，就會變得非常困難。營期間真的過得滿痛苦的，每天都在處理衝突、每天都在罵人，罵到後來甚至慢慢找到了自己的「罵人節奏」。
+</p>
+
+<p>
+前陣子有師資生跟我說，他不知道要怎麼嚴肅地教育孩子。那我真的非常推薦想訓練音量、班級經營以及臨場反應的夥伴來參加東莞教育見習，絕對會是一段非常寶貴的經驗（笑）。還好去帶史懷哲前有先來東莞磨練過。
+</p>
+
+
+<div class="photo-grid-three">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1eHG6R7p052Incy6N773R0rGCgOdKwpKH&sz=w1200"
+    alt="東莞教育見習">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1UfC3Hgz02Y6FNWWbelzrWewqmwmt1a3M&sz=w1200"
+    alt="東莞教育見習">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=125IZeLeMQFml0al58wW8vcm0zCSFoz1A&sz=w1200"
+    alt="東莞教育見習">
+
+</div>
+
+
+<p>
+但這其實也是一段滿慘痛的經驗。
+</p>
+
+<p>
+到了最後兩天開檢討會時，我甚至講著講著，眼淚就自己流下來。那一刻才發現，原來這幾天累積了這麼多挫折與無力感，也一直在懷疑自己到底有沒有把事情做好。
+</p>
+
+<p>
+但也正因如此，我看見了很多自己在班級經營上的不足。
+</p>
+
+<p>
+有時候真的要狠狠摔一跤，才會發現原來自己還有這麼多地方需要調整。以前修教程時，教授不斷提醒我們班級經營、規範建立與師生界線的重要性，當時可能只是把它當成課堂上的理論。直到真正站進現場，才知道那些提醒原來每一句都這麼重要。
+</p>
+
+
+<div class="article-section">
+
+  <div class="article-section-label">
+    DIABOLO TEACHING
+  </div>
+
+  <h2>
+    第一次面對50多人的扯鈴課
+  </h2>
+
+</div>
+
+
+<p>
+除了隊輔工作之外，這次的扯鈴教學也帶給我完全不同的挑戰。
+</p>
+
+<p>
+整個夏令營共有105位學生，分成兩個梯次上課，採連堂教學。不只要連續上三個小時，更是我第一次面對一次50多位學生的大班教學。這麼多人同時學習扯鈴，光是「怎麼讓大家站好、聽得到、看得到、練得到」，就需要花很多心思設計。
+</p>
+
+
+<div class="photo-grid">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1qlqqaIzjw41U7_vgtOQXWfFkQSAwvkiP&sz=w1200"
+    alt="扯鈴教學">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=11iRzV6Dd8168dUMKcyK8l6NyoUWC_EwE&sz=w1200"
+    alt="扯鈴教學">
+
+</div>
+
+
+<p>
+從聽講時的隊形，到實際練習時的空間安排、分組方式與集合流程，每一個環節都必須事先思考。因為要一次把50多位學生重新集合起來，本身就是一件非常不容易的事情。這也讓我第一次真正感受到，大班體育教學除了教會動作之外，教學流程與場地管理同樣重要。
+</p>
+
+<p>
+也很感謝信亨老師這段時間的指導，讓我第一次接觸到更專業的體育教學內容，也開始理解體育老師在動作示範、隊形安排與活動安排等教學節奏上的許多細節。
+</p>
+
+
+<div class="photo-grid-three">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=11ShMxq9mdP_emFwVuddUf4IGxbxqajya&sz=w1200"
+    alt="扯鈴教學">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=128nZQfqIL2Uop5FI_dHABcx2TDG2qHoz&sz=w1200"
+    alt="扯鈴教學">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1_zJs6JeZAmk3VGFvHKErhUHpfC-cuvzI&sz=w1200"
+    alt="扯鈴教學">
+
+</div>
+
+
+<p>
+所幸，扯鈴課程進行得非常順利，也讓我獲得很大的成就感。
+</p>
+
+<p>
+因為絕大多數的學生以前甚至沒有聽過扯鈴，透過這一堂課，讓他們第一次接觸這項來自台灣的民俗體育。看到許多孩子從一開始連扯鈴是什麼都不知道，到後來越玩越有興趣，甚至課程結束後還一直吵著要繼續玩（困擾），其實也是我最開心的事情之一。
+</p>
+
+
+<div class="article-section">
+
+  <div class="article-section-label">
+    A MOMENT TO REMEMBER
+  </div>
+
+  <h2>
+    「我以後想當扯鈴選手！」
+  </h2>
+
+</div>
+
+
+<p>
+其中讓我印象最深刻的是一位男學生。他上課時一直跑來問我不同的招式，學習速度也非常快，還很認真地跟我說：「我真的對扯鈴太有興趣了，我一定會買一組來玩，而且我以後想當扯鈴選手！」
+</p>
+
+<p>
+最後成果展時，我也和他一起合作表演了一小段扯鈴。
+</p>
+
+
+<div class="article-photo">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1bEpmr-oShho9EzcxThZOX2rvFHJ4PvPR&sz=w1600"
+    alt="東莞夏令營扯鈴成果展">
+
+</div>
+
+
+<div class="article-quote">
+  你永遠不知道自己哪一次的分享，會不會剛好替某個孩子打開一扇新的門。
+</div>
+
+
+<p>
+那一刻其實滿感動的。原本只是想把自己會的東西教給他們，沒想到一堂課真的有可能讓一個孩子對一件原本完全陌生的事情產生興趣。
+</p>
+
+<p>
+對我來說，這大概也是教學最有成就感的地方。
+</p>
+
+<p>
+而且不得不說，在東莞表演扯鈴真的超級開心，學生的反應比台灣學生捧場太多了XD。
+</p>
+
+
+<div class="photo-grid">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1ZT2OiFh3mp8yf4AcBuJkBaEqo1XryEs1&sz=w1200"
+    alt="東莞教育見習">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=12C70OMv5kWBwt3mkPhbhf-Zf3b2bEdDQ&sz=w1200"
+    alt="東莞教育見習">
+
+</div>
+
+
+<div class="article-section">
+
+  <div class="article-section-label">
+    REFLECTION
+  </div>
+
+  <h2>
+    有挫折，也有成就感
+  </h2>
+
+</div>
+
+
+<p>
+和小隊學生相處的過程中，也留下了很多快樂又好笑的回憶。撇除每天處理各種突發狀況，其實跟他們相處真的滿好玩的。最後，十一位小隊員一位也沒有少。
+</p>
+
+<p>
+當然，也有很累、很崩潰的時刻。但這次經驗讓我重新認識了自己，也讓我更清楚知道，自己還有哪些地方需要加強。
+</p>
+
+<p>
+怎麼帶人、怎麼建立規範、怎麼面對衝突、怎麼在混亂中調整自己，這些都是走進教育現場之後，需要不斷學習的事情。
+</p>
+
+
+<div class="photo-grid-three">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1Zl2Z1wlIwMC1MQnAIsFKhpgv7YUSeGSV&sz=w1200"
+    alt="東莞教育見習">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1uz1Xk7FhEc1-rPWebUyQITDBIXnm_rFs&sz=w1200"
+    alt="東莞教育見習">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1uXKVyg7y43rTu_CHxWe-HilIvtfpseLv&sz=w1200"
+    alt="東莞教育見習">
+
+</div>
+
+
+<div class="article-ending">
+
+  <p>
+    <strong>
+      有挫折，也有成就感；有被孩子氣到懷疑人生的時候，也有因為一句「我以後想當扯鈴選手」而覺得一切好像都值得了。
+    </strong>
+  </p>
+
+  <p>
+    這也成了我一段刻骨銘心的回憶。
+  </p>
+
+  <p>
+    最後，感謝隊長這段期間的辛勞，讓我們能專注、無後顧之憂地顧好小隊員、教學和旅遊。也謝謝所有一起奮鬥、一起撐過這段營期的夥伴們。
+  </p>
+
+</div>
+
+
+<!-- 最後四張照片 -->
+
+<div class="photo-grid">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1qC2y3KbQjU51R1xPVm0k1oFSWj-psKSp&sz=w1200"
+    alt="東莞教育見習">
+
+  <img
+    src="https://drive.google.com/thumbnail?id=1UOLKkSPvkvQsfguBt5VsyvE28Lupbc35&sz=w1200"
+    alt="東莞教育見習">
+
+</div>
+
+
+<div class="back-bottom">
+
+  <a href="index.html#journal" class="back-button">
+    <i class="bi bi-arrow-left me-2"></i>
+    返回札記
+  </a>
+
+</div>
+
+
+</main>
+
+
+<footer>
+
+  <strong>
+    張語宸 JHANG,YU-CHEN
+  </strong>
+
+  <div class="mt-2">
+    Education · International · Leadership
+  </div>
+
+  <div class="mt-3 small">
+    © 2026 JHANG,YU-CHEN. All Rights Reserved.
+  </div>
+
+</footer>
+
+
+</body>
+</html>

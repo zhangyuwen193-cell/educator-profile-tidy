@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>第一次真正成為班導師｜古亭國小教學實習</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --navy:#1f3553;
+  --gold:#b79a5b;
+  --soft:#f7f5ef;
+  --text:#29384b;
+  --muted:#6f7a88;
+  --line:#e8e3d8;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  color:var(--text);
+  line-height:1.9;
+  background:white;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* 導覽列 */
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.topbar-inner{
+  max-width:1400px;
+  margin:auto;
+  padding:16px 28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  font-weight:900;
+  color:var(--navy);
+}
+
+.brand-circle{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  margin-right:10px;
+  background:var(--navy);
+  color:white;
+}
+
+.back-btn{
+  padding:10px 20px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:white;
+  font-weight:700;
+}
+
+
+/* 標題 */
+
+.article-hero{
+  padding:90px 30px 75px;
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(183,154,91,.18),
+      transparent 30%
+    ),
+    var(--soft);
+}
+
+.article-hero-inner{
+  max-width:1300px;
+  margin:auto;
+}
+
+.label{
+  color:var(--gold);
+  font-size:.9rem;
+  font-weight:800;
+  letter-spacing:4px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:22px;
+}
+
+.label::before{
+  content:"";
+  width:50px;
+  height:2px;
+  background:var(--gold);
+}
+
+h1{
+  margin:0 0 15px;
+  color:var(--navy);
+  font-family:"LXGW WenKai TC","DFKai-SB","BiauKai",serif;
+  font-size:clamp(3rem,6vw,5.5rem);
+  line-height:1.25;
+}
+
+.subtitle{
+  color:var(--navy);
+  font-size:clamp(1.3rem,2.5vw,2rem);
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+.meta{
+  color:var(--gold);
+  font-size:1.05rem;
+  font-weight:800;
+}
+
+
+/* 文章 */
+
+.article-wrap{
+  max-width:1300px;
+  margin:auto;
+  padding:70px 30px 110px;
+}
+
+.article-body{
+  max-width:950px;
+  margin:auto;
+}
+
+.lead{
+  color:var(--navy);
+  font-size:1.45rem;
+  font-weight:800;
+  margin-bottom:35px;
+}
+
+.article-body p{
+  font-size:1.2rem;
+  line-height:2;
+  margin-bottom:30px;
+}
+
+
+/* 圖片 */
+
+.cover{
+  width:100%;
+  overflow:hidden;
+  border-radius:28px;
+  margin-bottom:65px;
+  background:#eee;
+  box-shadow:0 24px 60px rgba(31,53,83,.12);
+}
+
+.cover img{
+  display:block;
+  width:100%;
+  height:720px;
+  object-fit:cover;
+}
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  margin:50px 0;
+}
+
+.photo-card{
+  overflow:hidden;
+  border-radius:22px;
+  background:var(--soft);
+  border:1px solid var(--line);
+}
+
+.photo-card img{
+  display:block;
+  width:100%;
+  height:420px;
+  object-fit:cover;
+}
+
+.single-photo{
+  margin:55px 0;
+  overflow:hidden;
+  border-radius:24px;
+  box-shadow:0 15px 40px rgba(31,53,83,.08);
+}
+
+.single-photo img{
+  display:block;
+  width:100%;
+  max-height:680px;
+  object-fit:cover;
+}
+
+
+/* 引言 */
+
+.memory-quote{
+  margin:45px 0;
+  padding:32px 35px;
+  border-left:4px solid var(--gold);
+  background:var(--soft);
+  color:var(--navy);
+  font-family:"LXGW WenKai TC","DFKai-SB","BiauKai",serif;
+  font-size:1.45rem;
+  font-weight:700;
+  line-height:1.8;
+}
+
+.closing{
+  margin:70px auto 20px;
+  padding:45px 35px;
+  text-align:center;
+  border-radius:26px;
+  background:var(--navy);
+  color:white;
+  font-family:"LXGW WenKai TC","DFKai-SB","BiauKai",serif;
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:700;
+  line-height:1.8;
+}
+
+.closing span{
+  color:#d8bf89;
+}
+
+footer{
+  padding:42px 20px;
+  text-align:center;
+  background:#16283f;
+  color:#aeb9c5;
+}
+
+footer strong{color:white;}
+
+
+@media(max-width:767px){
+
+  .article-hero{padding:60px 20px 50px;}
+  .article-wrap{padding:40px 18px 80px;}
+
+  h1{font-size:2.8rem;}
+
+  .cover img{
+    height:auto;
+    max-height:600px;
+  }
+
+  .article-body p{font-size:1.05rem;}
+
+  .photo-grid{
+    grid-template-columns:1fr;
+  }
+
+  .photo-card img{
+    height:auto;
+    max-height:600px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="topbar">
+
+  <div class="topbar-inner">
+
+    <a href="index.html" class="brand">
+      <span class="brand-circle">張</span>
+      張語宸
+    </a>
+
+    <a href="index.html#journal" class="back-btn">
+      ← 回到札記
+    </a>
+
+  </div>
+
+</div>
+
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="label">
+      TEACHING PRACTICUM
+    </div>
+
+    <h1>
+      第一次真正成為班導師
+    </h1>
+
+    <div class="subtitle">
+      古亭國小教學實習
+    </div>
+
+    <div class="meta">
+      2025.12.22－2026.01.02｜臺北市古亭國小
+    </div>
+
+  </div>
+
+</header>
+
+
+<main class="article-wrap">
+
+
+<!-- 照片1 -->
+<div class="cover">
+  <img
+    src="https://drive.google.com/thumbnail?id=1yeTLz0nAuFHwXvW95gBY0tQ-h_jwjn8K&sz=w2000"
+    alt="古亭國小教學實習">
+</div>
+
+
+<article class="article-body">
+
+
+<p class="lead">
+  這是我第一次真正體驗國小班導師的生活。
+</p>
+
+<p>
+  跟著實習師傅，從教學到班級經營，
+  一步一步認識導師工作的日常。
+</p>
+
+<p>
+  實習前其實非常緊張，畢竟古亭國小是大安區的明星小學，
+  很擔心自己出了什麼差錯。
+  還好師傅平時班級經營有方，讓整個實習過程順利許多。
+</p>
+
+
+<!-- 照片2、3 -->
+<div class="photo-grid">
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1BJldSMGU68cuexIJEKO306iLAFDWem0Z&sz=w1600">
+  </div>
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=189ZxKkFtK5eOkIFEBVjpXZYdFXbTLmzO&sz=w1600">
+  </div>
+
+</div>
+
+
+<p>
+  這兩週幾乎每天晚睡早起。原本實習前已經準備好兩週完整的教案，
+  沒想到真正上完第一節課，就發現「理想的教案」和「真實的課堂」
+  完全是兩回事。
+</p>
+
+<p>
+  學生的反應、時間掌握、活動安排，都可能和預想不同，
+  因此每天教完課，晚上又得趕緊修改隔天的課程。
+</p>
+
+
+<div class="memory-quote">
+  「理想的教案」和「真實的課堂」，完全是兩回事。
+</div>
+
+
+<p>
+  這次負責國語與數學，而且不是試教，
+  而是真正接著班級進度往下教，頓時覺得肩上的責任重了不少，
+  畢竟上不好，是真的可能影響孩子段考的。
+</p>
+
+
+<!-- 照片4、5 -->
+<div class="photo-grid">
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1xuSh3X9h8qIZF6-V7D9S8PXXNYSyXqoT&sz=w1600">
+  </div>
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1nzAFcbMeFgtOK2a7gXi4YR6lK2npnlnI&sz=w1600">
+  </div>
+
+</div>
+
+
+<p>
+  空堂時間也沒有想像中的悠閒，而是協助師傅批改聯絡簿與作業。
+  原本以為改作業就是判斷對錯，實際做了才發現完全不是如此。
+</p>
+
+<p>
+  國字要建立字體的審美標準、錯別字要夠敏感，
+  不同表現有不同印章與加分方式；遇到學生比較冷門的造詞、造句，
+  有時甚至還要特別查證。
+</p>
+
+
+<!-- 照片6、7 -->
+<div class="photo-grid">
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=17YQfLIDCsZCJ8AINueTytReye3U5W41G&sz=w1600">
+  </div>
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1h-Qk0Y0uqpQHZoIxTblRl6CURVowi9_F&sz=w1600">
+  </div>
+
+</div>
+
+
+<p>
+  好不容易改完作業，接著就是議課。
+  師傅會在我上課時仔細記錄需要調整的地方，
+  每次給我的建議都非常扎實，也讓我一次次修正自己的教學。
+</p>
+
+
+<p>
+  公開授課當天，教授、校長、兩位導師及兩位師資生一起進班觀課。
+  準備許久的我原本相當有自信，沒想到上課途中，
+  班上第一名的學生不斷挑戰我所說的內容。
+</p>
+
+
+<!-- 照片8 -->
+<div class="single-photo">
+  <img src="https://drive.google.com/thumbnail?id=1Kdl4VCxPARD_KCXq3rFNdwk9i6sQx5MK&sz=w1800">
+</div>
+
+
+<p>
+  當下真的非常緊張，還好最後順利化解。
+</p>
+
+
+<div class="memory-quote">
+  老師可以準備好一堂課，<br>
+  卻永遠無法事先準備好學生的每一個反應。
+</div>
+
+
+<!-- 照片9、10 -->
+<div class="photo-grid">
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1WiFmFciHebwlUQ3Lc9OH4HKBBIKn1Mzk&sz=w1600">
+  </div>
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1yTuaofvlHiSFm26FmdNCnZY_JwRIymGF&sz=w1600">
+  </div>
+
+</div>
+
+
+<p>
+  而真正跟著師傅過完一天，更讓我看見班導師遠比想像中忙碌。
+  從早自修開始，大批聯絡簿與作業堆上講桌，
+  要確認誰沒交、請學生登記、催交作業，
+  還要隨時處理學生的各種狀況。
+</p>
+
+<p>
+  一天平均還有3.2堂課，從國語、數學、綜合、健康、
+  社會到專題課程，幾乎樣樣都得會。
+</p>
+
+<p>
+  空堂時間繼續改作業、批聯絡簿；
+  學生上科任課時，也不代表導師就能休息。
+  有次學生突然發燒，師傅立刻聯絡護理師與家長，
+  處理孩子的身體狀況。
+</p>
+
+<p>
+  有時候忙到最後，甚至連上廁所的時間都沒有。
+</p>
+
+
+<!-- 照片11、12 -->
+<div class="photo-grid">
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1dU8wftyXDdytRYahDXL-Ny6hOkLkvbOt&sz=w1600">
+  </div>
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1OQQ40nQbdF6icOm5WqHK0nilAps3wYLq&sz=w1600">
+  </div>
+
+</div>
+
+
+<p>
+  不過，我也慢慢發現師傅之所以能在如此繁忙的工作中，
+  依然讓班級井然有序，背後其實有一套非常完整的班級經營方式。
+</p>
+
+<p>
+  師傅讓幾乎每位學生都有自己的幹部職位與責任，
+  有人負責登記、有人協助收作業，也有人處理班上的大小事。
+</p>
+
+
+<div class="memory-quote">
+  整個班級運作起來就像一個小型社會，<br>
+  每個孩子都是其中的一分子。
+</div>
+
+
+<!-- 照片13、14 -->
+<div class="photo-grid">
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1DpxbeoGbUX28ZlsthQLWH0IaKMKEg3Yn&sz=w1600">
+  </div>
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1gCRf3jbYiIGoFKy7Q807ZHW3jJL8d8dt&sz=w1600">
+  </div>
+
+</div>
+
+
+<p>
+  導師不需要所有事情都親力親為，
+  孩子也能從自己的職位中學習負責、合作與自治。
+</p>
+
+<p>
+  師傅的班級經營還藏著許多大大小小的細節，
+  有時候一次接收到太多方法，
+  真的會覺得有點吸收不良、非常燒腦。
+</p>
+
+<p>
+  但後來想想，這套看似完整又自然的班級經營模式，
+  是師傅累積十幾、二十年教學經驗後慢慢形成的，
+  而我們才剛站在教師生涯的起點，
+  本來就不可能在短短兩週內就能游刃有餘的運用。
+</p>
+
+
+<!-- 照片15、16 -->
+<div class="photo-grid">
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1EgvcEiAXhRFMBiSmOSmdkVkWoeBsC2ZI&sz=w1600">
+  </div>
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1c3ofWcunwpkAnY_o-nSUHcepXQhbubrH&sz=w1600">
+  </div>
+
+</div>
+
+
+<p>
+  或許現在更重要的，不是把師傅的每一個方法全部複製下來，
+  而是先把看見的、學到的記在心裡。
+</p>
+
+<p>
+  未來真正擁有自己的班級後，
+  再透過一次次嘗試與修正，
+  慢慢長出一套屬於自己的班級經營方式。
+</p>
+
+
+<!-- 照片17、18 -->
+<div class="photo-grid">
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1aSb-clOPVhYinOEualYE5rRgHDA5TdtH&sz=w1600">
+  </div>
+
+  <div class="photo-card">
+    <img src="https://drive.google.com/thumbnail?id=1W-B_aVZIqtP0bwPaaf68Rlth2fBeeP05&sz=w1600">
+  </div>
+
+</div>
+
+
+<div class="closing">
+
+  兩週以前，我以為當老師最重要的是
+  <span>把課教好</span>；<br><br>
+
+  兩週以後才發現，<br>
+  教學只是導師工作的一部分。<br><br>
+
+  真正的班導師，是在一整天無數件大大小小的事情裡，<br>
+  同時照顧著一整班孩子的
+  <span>學習與生活</span>。
+
+</div>
+
+
+</article>
+
+</main>
+
+
+<footer>
+
+  <strong>
+    張語宸 JHANG,YU-CHEN
+  </strong>
+
+  <div>
+    JOURNAL · EDUCATION · PRACTICE
+  </div>
+
+</footer>
+
+
+</body>
+</html>

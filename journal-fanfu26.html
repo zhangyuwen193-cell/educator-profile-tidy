@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>返服26｜那些凌晨回宿舍的日子，成了我走向教育的起點</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
+rel="stylesheet">
+
+<style>
+
+:root{
+  --navy:#1f3553;
+  --gold:#b79a5b;
+  --soft:#f7f5ef;
+  --text:#29384b;
+  --muted:#6f7a88;
+  --line:#e8e3d8;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  color:var(--text);
+  line-height:1.9;
+  background:white;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================
+   上方導覽
+========================= */
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.topbar-inner{
+  max-width:1400px;
+  margin:auto;
+
+  padding:16px 28px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+
+  font-weight:900;
+  color:var(--navy);
+}
+
+.brand-circle{
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  margin-right:10px;
+
+  background:var(--navy);
+  color:white;
+}
+
+.back-btn{
+  padding:10px 20px;
+
+  border:1px solid var(--line);
+  border-radius:999px;
+
+  background:white;
+
+  font-weight:700;
+
+  transition:.25s;
+}
+
+.back-btn:hover{
+  transform:translateY(-2px);
+
+  box-shadow:0 8px 20px rgba(31,53,83,.10);
+}
+
+
+/* =========================
+   文章標題
+========================= */
+
+.article-hero{
+
+  padding:90px 30px 75px;
+
+  background:
+  radial-gradient(
+    circle at 90% 20%,
+    rgba(183,154,91,.18),
+    transparent 30%
+  ),
+  var(--soft);
+}
+
+.article-hero-inner{
+  max-width:1300px;
+  margin:auto;
+}
+
+.label{
+  color:var(--gold);
+
+  font-size:.9rem;
+  font-weight:800;
+
+  letter-spacing:4px;
+
+  display:flex;
+  align-items:center;
+
+  gap:15px;
+
+  margin-bottom:22px;
+}
+
+.label::before{
+  content:"";
+
+  width:50px;
+  height:2px;
+
+  background:var(--gold);
+}
+
+h1{
+
+  margin:0 0 15px;
+
+  color:var(--navy);
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:clamp(3rem,6vw,5.5rem);
+
+  line-height:1.25;
+}
+
+.subtitle{
+
+  color:var(--navy);
+
+  font-size:clamp(1.3rem,2.5vw,2rem);
+
+  font-weight:800;
+
+  margin-bottom:25px;
+}
+
+.meta{
+
+  color:var(--gold);
+
+  font-size:1.05rem;
+
+  font-weight:800;
+
+  letter-spacing:1px;
+}
+
+
+/* =========================
+   文章
+========================= */
+
+.article-wrap{
+
+  max-width:1300px;
+
+  margin:auto;
+
+  padding:70px 30px 110px;
+}
+
+
+/* 封面 */
+
+.cover{
+
+  width:100%;
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  margin-bottom:60px;
+
+  background:#eee;
+
+  box-shadow:
+  0 24px 60px rgba(31,53,83,.12);
+}
+
+.cover img{
+
+  display:block;
+
+  width:100%;
+
+  max-height:780px;
+
+  object-fit:cover;
+}
+
+
+/* 文章文字 */
+
+.article-body{
+
+  max-width:950px;
+
+  margin:auto;
+}
+
+.lead{
+
+  color:var(--navy);
+
+  font-size:1.45rem;
+
+  font-weight:800;
+
+  margin-bottom:35px;
+}
+
+.article-body p{
+
+  font-size:1.2rem;
+
+  line-height:2;
+
+  margin-bottom:30px;
+}
+
+
+/* =========================
+   照片
+========================= */
+
+.photo-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(2,minmax(0,1fr));
+
+  gap:24px;
+
+  margin:50px 0;
+}
+
+.photo-card{
+
+  overflow:hidden;
+
+  border-radius:22px;
+
+  border:1px solid var(--line);
+
+  background:var(--soft);
+
+  box-shadow:
+  0 12px 30px rgba(31,53,83,.06);
+}
+
+.photo-card img{
+
+  display:block;
+
+  width:100%;
+
+  height:420px;
+
+  object-fit:cover;
+}
+
+
+/* =========================
+   最後一句
+========================= */
+
+.closing{
+
+  max-width:950px;
+
+  margin:70px auto 20px;
+
+  padding:45px 35px;
+
+  text-align:center;
+
+  border-radius:26px;
+
+  background:var(--navy);
+
+  color:white;
+
+  font-family:
+  "LXGW WenKai TC",
+  "DFKai-SB",
+  "BiauKai",
+  serif;
+
+  font-size:
+  clamp(1.7rem,3vw,2.6rem);
+
+  font-weight:700;
+
+  line-height:1.6;
+}
+
+.closing span{
+  color:#d8bf89;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+
+  padding:42px 20px;
+
+  text-align:center;
+
+  background:#16283f;
+
+  color:#aeb9c5;
+}
+
+footer strong{
+  color:white;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width:767px){
+
+  .topbar-inner{
+    padding:12px 15px;
+  }
+
+  .article-hero{
+    padding:60px 20px 50px;
+  }
+
+  .article-wrap{
+    padding:40px 18px 80px;
+  }
+
+  h1{
+    font-size:3rem;
+  }
+
+  .subtitle{
+    font-size:1.35rem;
+  }
+
+  .lead{
+    font-size:1.2rem;
+  }
+
+  .article-body p{
+    font-size:1.05rem;
+  }
+
+  .photo-grid{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+    margin:35px 0;
+  }
+
+  .photo-card img{
+
+    height:auto;
+
+    max-height:520px;
+  }
+
+  .closing{
+
+    margin-top:50px;
+
+    padding:32px 20px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+NAV
+========================= -->
+
+<div class="topbar">
+
+  <div class="topbar-inner">
+
+    <a
+      href="index.html"
+      class="brand">
+
+      <span class="brand-circle">
+        張
+      </span>
+
+      張語宸
+
+    </a>
+
+
+    <a
+      href="index.html#journal"
+      class="back-btn">
+
+      ← 回到札記
+
+    </a>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+ARTICLE HEADER
+========================= -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="label">
+      JOURNAL
+    </div>
+
+
+    <h1>
+      返服26
+    </h1>
+
+
+    <div class="subtitle">
+
+      從這裡開始，我走向了教育
+
+    </div>
+
+
+    <div class="meta">
+
+      2024.01.28－01.30
+      ｜中友返服26・活動股員
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+ARTICLE
+========================= -->
+
+<main class="article-wrap">
+
+
+  <!-- 封面照片 -->
+
+  <div class="cover">
+
+    <img
+      src="https://drive.google.com/thumbnail?id=1SXXkCyqAHe1kY_QOXilOtSR-xMgtYa1S&sz=w2000"
+      alt="中友返服26">
+
+  </div>
+
+
+
+  <article class="article-body">
+
+
+    <p class="lead">
+
+      大一參與中友返服，
+      是我決定走向國小教育與偏鄉教育的起點。
+
+    </p>
+
+
+    <p>
+
+      室友曾說，那段時間的我常常凌晨一、兩點才回到宿舍。
+      對原本不太擅長熬夜的我來說，
+      活動股一次次的股練確實充滿挑戰。
+
+    </p>
+
+
+    <p>
+
+      從團康、大地遊戲、知足，到結業劇、音樂劇、
+      RPG與螢光舞，我們花了無數個夜晚討論與排練，
+      也在一次次的疲憊與磨合中，
+      把原本只存在腦中的想法，
+      真正變成孩子眼前的一場場活動。
+
+    </p>
+
+
+
+    <!-- 照片 2、3 -->
+
+    <div class="photo-grid">
+
+
+      <div class="photo-card">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=13piv5Ylz9wYD9sUsYUtiUwnk2pb9CUny&sz=w1600"
+          alt="返服26活動紀錄">
+
+      </div>
+
+
+      <div class="photo-card">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=16aCcPGGinHdyu70w2JhcPzcDcxXG2qhH&sz=w1600"
+          alt="返服26活動紀錄">
+
+      </div>
+
+
+    </div>
+
+
+
+    <p>
+
+      很謝謝一路照顧我們的股長，
+      也特別感謝宜庭，
+      在那段辛苦的日子裡一直支撐著我；
+      同樣謝謝所有一起熬夜、一起排練、
+      一起奮戰的夥伴。
+
+    </p>
+
+
+    <p>
+
+      現在回頭看，
+      那些凌晨才回到宿舍的日子，
+      好像很累，卻也特別值得懷念。
+
+      團康、大地、手語舞、結業劇、
+      音樂劇、螢光舞，
+      不只是營隊中的一個個活動，
+      更是我們一起努力過的印記。
+
+    </p>
+
+
+
+    <!-- 照片 4、5 -->
+
+    <div class="photo-grid">
+
+
+      <div class="photo-card">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1cxA8O8Lxj-xX9ggD_inATKIJe814RcE3&sz=w1600"
+          alt="返服26活動紀錄">
+
+      </div>
+
+
+      <div class="photo-card">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1og5xoL_5Ydh02QCllLpCprdyfJbJmoWT&sz=w1600"
+          alt="返服26活動紀錄">
+
+      </div>
+
+
+    </div>
+
+
+
+    <p>
+
+      而對我而言，
+      返服26留下的不只是回憶。
+
+    </p>
+
+
+    <p>
+
+      也是從那時開始，
+      我更加確定自己喜歡和孩子相處、
+      喜歡站在教育現場，
+      也第一次認真開始想像——
+
+      或許有一天，
+      我真的可以成為一位老師。
+
+    </p>
+
+
+
+    <div class="closing">
+
+      <span>返服26</span>，
+      是一段青春的回憶，<br>
+
+      也是我走向教育的起點。
+
+    </div>
+
+
+  </article>
+
+</main>
+
+
+
+<footer>
+
+  <strong>
+    張語宸 JHANG,YU-CHEN
+  </strong>
+
+  <div>
+    JOURNAL · LIFE · EDUCATION · PRACTICE
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
